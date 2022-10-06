@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Formulario Estilizado con CSS</title>
+  <meta charset="UTF-8">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Formulario Estilizado con CSS</title>
+      <p id="description" class="description text-center">Para carga de datos de usuarios</p>
+    </header>
+    <div>
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">Nombre Completo*</label>
+        <input id="name" class="form-control" type="text" name="name" placeholder="Nombre" required>
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Email*</label>
+        <input id="email" type="email" name="email" class="form-control" placeholder="Email?" required>
+      </div>
+      <div class="form-group">
+        <label id="number-label" for="number">Edad <span class="clue">(opcional)</span></label>
+        <input id="number" class="form-control" type="number" for="number" min="18" max="120" placeholder="Edad">
+      </div>
+      <div class="form-group">
+          <p>Que opcion lo describe mejor?*</p>
+          <select id="dropdown" name="role" class="form.control" required>
+            <option disable selected value>Indique su opcion...</option>
+            <option value="1">Opcion1</option>
+            <option value="2">Opcion2</option>
+            <option value="3">Opcion3</option>
+          </select>
+      <div class="form-group">
+        <p>Se lo recomendarias a un amigo?</p>
+        <label> 
+          <input class="input-radio" name="radiobutton" type="radio" value="opcionA" checked>opcionA
+        </label>
+        <label>
+          <input class="input-radio" name="radiobutton" type="radio" value="opcionB">opcionB
+        </label>
+        <label>  
+          <input class="input-radio" name="radiobutton" type="radio" value="opcionC">opcionC
+        </label>  
+      <div class="form-group">
+        <p>Cuales son tus actividades preferidas?</p>
+        <label>
+          <input class="input-check" name="checkbutton" type="checkbox" value="checkA">checkA
+        </label>
+        <label>
+          <input class="input-check" name="checkbutton" type="checkbox" value="checkB">checkB
+        </label>
+        <label>
+          <input class="input-check" name="checkbutton" type="checkbox" value="checkC">checkC
+        </label>    
+      </div>
+      <div class="form-group">
+        <p>Algun comentario adicional?</p>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Ponga aqui su comentario..."></textarea>
+      </div>
+      <div class="form-group">
+        <input id="submit" class="submit-button" type="submit">
+      </div>
+    </form>
+    </div>
+  </div>  
+</body>
+
+
+</html>
+

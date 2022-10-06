@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action ="mailto: crmartinez93@hotmail.com.ar" method="POST" enctype="text/plain"> 
+        <label for="fechaVac">Fecha vacunación </label>
+                <input type="date" size="30" name="fechaVac" id="fechaVac">
+
+        <br>
+        <br>        
+        <div>
+        <label for="vacunas">Vacuna:</label>
+        <select name = "vacunas">
+            <option>Antirrabica</option>
+            <option>Coronavirus</option>
+            <option>Cuadruple</option>
+            <option>Leptospirosis</option>
+            <option>Leucemia Felina</option>
+            <option>Quintuple</option>
+            <option>Sextuple</option>
+            <option>Tos de las perreras</option>
+            <option>Triple Felina</option>
+            <option>Otros</option>
+        </select>
+        </div>
+        <br>
+        <br>
+        <div>
+            <label for="marcaYSerie">Marca y número de serie</label>
+            <input type="text" size="30" name="marcaYSerie id="marcaYSerie>
+        </div>
+        <br>
+        <br>
+        <div>
+        <p>Detalles:</p>
+            <textarea name ="detallesVac" rows = "5" cols= "150" placeholder="Detalles de la vacunación"></textarea>
+        <br>
+        <br>
+            <label for="proxVac">Fecha de la próxima vacunación:</label>
+            <input type="date" size="30" name="proxVac" id="proxVac" placeholder="Fecha proxima vacunación">
+        </div>
+    </form>
+</body>
+</html>
