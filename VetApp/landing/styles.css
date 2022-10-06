@@ -1,0 +1,152 @@
+body {
+  font-family: sans-serif;
+}
+
+.carousel {
+  margin: 0 auto;
+  overflow: auto;
+  text-align: center;
+
+}
+
+.slides {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+
+}
+
+.slides-item {
+  align-items: center;
+  border-radius: 50px;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 20px;
+  height: 600px;
+  justify-content: center;
+  margin: 0 1rem;
+  position: relative;
+  scroll-snap-align: start;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform .5s;
+  width: 100%;
+}
+
+.carousel__nav {
+  padding: 1.25rem .5rem;
+}
+
+.slider-nav {
+  align-items: center;
+  background-color: #ddd;
+  border-radius: 30%;
+  color: #000;
+  display: inline-flex;
+  height: 1.5rem;
+  justify-content: center;
+  padding: .5rem;
+  position: relative;
+  text-decoration: none;
+  width: 3.5rem;
+}
+
+.slider-nav:hover,
+.slider-nav:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.slide-text {
+  max-width: 600px;
+}
+
+.slide-1 {
+  background-color: lightblue;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.slide-img {
+  border-radius: 40px;
+  width: 450px;
+  height: auto
+}
+
+
+.slide-2 {
+  background-color: lightseagreen;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.slide-3 {
+  background-color: lightskyblue;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.slide-4 {
+  background-color: none;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.iframe-login {
+  position: fixed;
+  display: flex;
+  inset: 0px;
+  /* inset: 60px 20px 10px 90px; */
+  /* width: 100wv; */
+  width: 100wv;
+  min-width: 400px;
+  min-height: 400px;
+  /* background: var(--color-beige); */
+  transition: 0.3s;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  overflow: hidden;
+  /* z-index: 1; */
+  background-color: transparent;
+
+}
+
+#iframe-login {
+  width: 100%;
+  height: 100%;
+  border-style: none;
+
+}
+
+
+/* .carousel__skip-link {
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+
+.carousel__skip-link:focus {
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  font-size: 30px;
+  height: 680px;
+  justify-content: center;
+  opacity: .8;
+  text-decoration: none;
+  width: 100%;
+  z-index: 1;
+} */
