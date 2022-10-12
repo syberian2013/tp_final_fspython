@@ -1,4 +1,12 @@
-function valida_login() {
+var user = document.getElementById("user")
+
+function valida_login()
+alert("si");
+if (user.length = "") {
+    alert("vacio");
+}
+
+function valida_login2() {
     //valido el nombre
     if (document.form-login.user == 0) {
         alert("Tiene que escribir su nombre")

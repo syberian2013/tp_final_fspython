@@ -14,78 +14,11 @@
  " rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&displom" rel="stylesheet">
     <link rel="stylesheet" href="styles-login.css">
+
     <title>--LOGIN--</title>
 
 </head>
   
-<style>
-    * {
-        font-family: 'Poppins', sans-serif;
-    }
-
-    .box {
-        width: 100%;
-        height: 80px;
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    #btn-login {
-        text-decoration: none;
-        font-size: 1rem;
-        color: #f7f9fa;
-        padding: 2rem;
-        transition: all .5s;
-        position: relative;
-        perspective: 30rem;
-    }
-
-    #btn-login::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 60px;
-        position: absolute;
-        top: 3rem;
-        left: 0;
-        background: #e6036d34;
-        border-radius: 1.5rem;
-        transform: rotateX(80deg);
-        z-index: 2;
-    }
-
-    #btn-login::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 60px;
-        position: absolute;
-        top: 10px;
-        left: 0;
-        background: #e6036e;
-        border-radius: 1.5rem;
-        z-index: -1;
-    }
-
-    #btn-login:hover::before {
-        animation: rotate 1s;
-        transition: all .5s;
-    }
-
-    @keyframes rotate {
-        0% {
-            transform: rotateY(180deg);
-        }
-
-        100% {
-            transform: rotateY(360deg);
-        }
-    }
-</style>
-
 <body>
     <div class="container">
         <header class="header">
@@ -94,63 +27,36 @@
        
         <form action="" id="formlogin" method="get">
            
-            <div class="form-group">
+            <div class="form-group" >
                 <label for="user">Usuario: </label>
-                <input id="user" class="form-control" type="text" name="user" placeholder="Usuario" required>
+                <input id="user" class="form-control" type="text" name="user" placeholder="Usuario" onfocus="limpiaAviso()" required>
 
                 <label for="pass">Contraseña: </label>
-                <input id="pass" type="password" name="pass" class="form-control" placeholder="Contraseña" required>
+                <input id="pass" type="password" name="pass" class="form-control" placeholder="Contraseña" onfocus="limpiaAviso()" required>
             </div>
             
-            <div class="warn-cred">
-                <p id="aviso" style="font-size: 14px; text-shadow: 0px 1px 1px; animation: animate 5s infinite linear;">Usuario o contraseña invalida, intente nuevamente o recupere credenciales</p>
+            <div>
+                <p id="aviso" style="font-size: 14px; text-shadow: 0px 1px 1px; animation: animate 5s infinite linear;"></p>
             </div>
 
 
             <div class="form-envio">
                 <div class="form-group">
-<!--					        <input id="btn-login" class="submit-button" type="button" value="Ingresar" onClick="valida_login()">-->
                   <div class="box">
-                    <a id="btn-login" href="#" onClick="alert('login');">INGRESAR</a>
+                    <a id="btn-login" href="#" onClick="valida_login()">INGRESAR</a>
                   </div>
                   
-<!--
-                  <div>
-                     <p>Olvido su usuario o contraseña?</p>
-                  </div>
--->
-				        </div>
 
-               
-<!--                <p>Haga click <a href="">aqui</a></p>-->
-                
-                
+                  <div id="recupera">
+                     <p>Olvido su usuario o contraseña?</p>
+                     <p>Haga click <a href="">aqui</a></p>
+                  </div>
+
+				</div>
             </div>
         </form>
     </div>
-    <script> 
-    function valida_login() {
-        const fuser = document.getElementById('user').value;
-        const fpass = document.getElementById('pass').value;
-        
-        if (fuser == "") {
-            console.log(fuser);
-            document.formlogin.fuser.focus();
-            document.formlogin.usuario.focus();
-            return 0;
-        }
-
-        
-
-        // if (form-user == 0) {
-        //     alert("si")
-        // }
-        //         elementos = formulario.elements,
-        //         boton = document.getElementById('btn');
-        
-                
-    }
-    </script>
+    <script src="./login.js"></script>    
 </body>
 
 </html>
