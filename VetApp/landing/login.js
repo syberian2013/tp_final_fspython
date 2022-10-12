@@ -16,21 +16,11 @@ if (userName.value == "" || password.value == "") {
     conteoError();
 
 } else { 
-<<<<<<< HEAD
     if (userName.value == "admin" && password.value == "admin1") {
         console.log("login")
         let Home2 = parent.location
         Home2.href = "../barra-lateral/index.html";
 
-=======
-    if (userName.value == "admin" &&    password.value == "admin1") {
-        console.log("login")
-        let targetURL = '../barra-lateral/index.html';
-        let newURL = document.createElement('a');
-        newURL.href = targetURL;
-        document.body.appendChild(newURL);
-        newURL.click();
->>>>>>> origin/main
     } else {
         avisoBadlogin.style.opacity = 1
         avisoBadlogin.textContent = "Usuario o Contraseña Incorrectos"   
@@ -47,7 +37,6 @@ function conteoError(){
     }
 }
 
-<<<<<<< HEAD
 // etTimeout( function() { window.location.href = "web"; }, 5000 );
 
 }
@@ -56,9 +45,5 @@ function conteoError(){
 function testeo(){
     let Home2 = parent.location
     Home2.href = "../barra-lateral/index.html";
-=======
-// etTimeout( function() { window.location.href = "https://professor-falken.com"; }, 5000 );
-
->>>>>>> origin/main
 }
 
