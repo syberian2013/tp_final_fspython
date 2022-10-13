@@ -263,8 +263,8 @@ body {
 } 
 
 
-
 @media (min-width: 768px) and (max-width: 1096px) {
 .container {
 	width: 100%;
+}
 }

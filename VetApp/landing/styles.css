@@ -29,36 +29,40 @@
 
 * {
   font-family: 'Poppins', sans-serif;
+  font-size: 16px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
-
 
 body {
   background: var(--color-gradiente);
 }
 
+h1,
+h2 {
+  font-size: 2rem;
+}
+
 p {
   font-size: 1rem;
   margin: 2rem;
-  
 }
 
 img {
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .description {
   font-style: italic;
   font-weight: 300;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 .carousel {
-  margin: 5px;
+
   overflow: auto;
   text-align: center;
-
-
+  border:none;
 }
 
 .slides {
@@ -68,24 +72,21 @@ img {
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  border: none;
 }
 
 .slides::-webkit-scrollbar {
   display: none;
+  border: none;
 
 }
 
 .slides-item {
+  background-color: var(--color-azulado);
   color: var(--color-beige);
   align-items: center;
-  border-radius: 50px;
   display: flex;
   flex-shrink: 0;
-  font-size: 16px;
-  height: auto;
-  /* justify-content: center; */
-  margin: 0 1rem;
-  position: relative;
   scroll-snap-align: start;
   transform: scale(1);
   transform-origin: center center;
@@ -106,12 +107,13 @@ img {
   background-color: var(--color-beige);
   border-radius: 30%;
   display: inline-flex;
-  height: .5rem;
+  /* height: 20px;
+  width: 120px; */
   justify-content: center;
   padding: 1rem;
   position: relative;
   text-decoration: none;
-  width: 4rem;
+  
 }
 
 .slider-nav:hover,
@@ -121,9 +123,7 @@ img {
   text-shadow: 1px 1px 1px var(--color-naranja);
 }
 
-.slide-text {
-  max-width: 500px;
-}
+
 
 .slide-1,
 .slide-2,
@@ -181,12 +181,10 @@ img {
 }
 
 .ceo-txt {
-  min-width: 235px;
-  font-size: 14px;
-  padding: 0.8rem;
+  min-width: 300px;
+  font-size: 0.9rem;
+  padding: 0;
   text-align: justify;
-  
-  
 }
 
 /* Estilos del form contacto */
@@ -201,7 +199,7 @@ img {
 label {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -209,13 +207,18 @@ input,
 button,
 select,
 textarea {
-  margin: 0;
+  align-items: center;
+  align-content: center;
+
+  /* margin: 0; */
   font-family: inherit;
   font-size: 14px;
-  line-height: inherit;
+  /* line-height: inherit; */
 }
 
 #dropdown {
+  margin: 0;
+  padding: 0;
   height: 40px;
 }
 
@@ -227,8 +230,8 @@ textarea {
 .form-control {
   display: block;
   width: 100%;
-  height: 1rem;
-  padding: 0.5rem 0.75rem;
+  height: 20px;
+  /* padding: 0.5rem 0.75rem; */
   color: #495057;
   border-radius: 20px;
   
@@ -255,65 +258,87 @@ textarea {
 }
 
 .submit-button {
+  font-size: 1.1rem;
   display: block;
   width: 70%;
   padding: 1rem;
-  background-color: var(--color-green);
-  color: inherit;
+  font-weight: 400;
+  color: black;
+  background-color: var(--color-naranja); 
   border-radius: 50px;
   cursor: pointer;
   margin: 0.5rem auto 1rem auto;
+
 } 
 
 
 /* cortes por tamaño de screen */
-@media all and (max-width: 1000px) {
+
+@media all and (min-width: 360px) and (max-width: 768px) {
+
   #principal {
-    max-width: 1200px;
+    max-width: 750px;
   }
   .ceos {
     display: block;
     min-width:400px;
   }
+
 }
 
- @media (max-width: 700px) {
-  #principal {
-    max-width: 720px;
+@media all and (min-width: 769px) and (max-width: 900px) {
+
+  .ceos {
+    display: block;
+    min-width:400px;
   }
 
-
-} 
-
-@media all and (max-width: 500px) {
-  .carousel {
-    min-width: 400px;
-  }
-  form {
-    padding: 2.5rem;
-  }
-
-  /* .slide-1,
-  .slide-3,
-  .container {
-    height: 80vh; 
-  }
-  .slide-4{
-    position: relative;
-    display: flex;
-    inset: 0px;
-    width: 100wv;
-  } */
-}
-
-
-/* 
-@media all and (max-width: 400px) {
-  .container {
+  .description,
+  .slide-text {
     max-width: 600px;
   }
+  
+  .carousel {
+    max-width: 800px;
+  }
 }
 
- */
+@media all and (min-width: 901px) {
 
+  .description,
+  .slide-text {
+    max-width: 800px;
+  }
 
+}
+
+ /* Se agrega el color a mano porque es sencillo ya que se usa puntualmente acá*/
+
+ #avisoForm {
+  opacity: 0;
+  transition: 0.2s all linear;
+  text-align-last: center; 
+  justify-content: center;
+  max-width: 250px;
+  max-height: 20px;
+}
+
+ @keyframes animate {
+
+  0%,
+  100% {
+      color: var(--color-blanco);
+  }
+
+  25% {
+      color: red;
+  }
+
+  50% {
+      color: var(--color-blanco);
+  }
+
+  75% {
+      color: red;
+  }
+}

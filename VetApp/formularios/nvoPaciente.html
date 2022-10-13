@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styles-form.css" />
+  <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico" />
 </head>
+
 <body>
+    <header>
+        <a href="nvaCons.html">Nueva Consulta</a>
+        <a href="nvaVac.html">Nueva Vacuna</a>
+        <a href="nvaDesp.html">Nueva Desparacitación</a>
+    </header>
     <!--Datos del dueño para displayar en una tabla, formulario o lugar de la página-->
     <h3>Datos propietario</h3>
     <div>
@@ -71,49 +79,18 @@
             <label for="castracion">¿Está castrado/a?: </label>
             <input type="radio" name="castracion" value="1" checked > Si
             <input type="radio" name="castracion" value="2" > no
-
         </form>
-    </div>
-    <!--Ejemplo de display-->
 
-    <h3>Paciente</h3>
+    </div>
     <div>
-        
-        <table>
-            <th>Nombre</th>
-            <th>Especie</th>
-            <th>Raza</th>
-            <th>Fecha de nacimiento</th>
-            <th>Edad</th>
-            <th>Peso [kg]</th>
-            <th>Sexo</th>
-            <th>¿En adopción?</th>
-            <th>¿Castrado/a?</th>
+        <img src="https://cdn2.thecatapi.com/images/5ra.jpg" width = 300 height = auto>
+        <br>
 
-            <tr>
-                <td>Michichus</td>
-                <td>Felino</td>
-                <td>Común europeo</td>
-                <td>Diciembre 2021</td>
-                <td>9 meses</td>
-                <td>2</td>
-                <td>Hembra</td>
-                <td>No</td>
-                <td>Si</td>
-            </tr>
-            <tr>
-                <td>Jack</td>
-                <td>Canino</td>
-                <td>Rottweiler</td>
-                <td>Enero 2015</td>
-                <td>7 años </td>
-                <td>45</td>
-                <td>Macho</td>
-                <td>No</td>
-                <td>No</td>
-            </tr>
-
-        </table>
+        <button onclick="cargarFoto()">Cargar foto</button>
     </div>
+
+    <button onclick="guardarDatos()">Guardar datos</button>
+    
+
 </body>
 </html>

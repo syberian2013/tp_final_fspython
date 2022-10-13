@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico"/>
     <link rel="stylesheet" href="styles.css" />
     <title> - VetApp Home - </title>
   
@@ -16,7 +16,7 @@
 <body id="principal">
   
   <div class="carousel__nav">
-    <div><img class="slide-img" src="../img/logo-vetapp.jpg" alt="VetApp" style="height:80px;width:auto;border-radius:50%;"/></div>
+    <div><img class="slide-img" src="../img/logo-vetapp.jpg" alt="VetApp" style="height:80px;width:80px;border-radius:50%;"/></div>
     <a class="slider-nav" href="#slide-1" aria-label="Salto al slide1">Home</a>
     <a class="slider-nav" href="#slide-2" aria-label="Salto al slide2">About</a>
     <a class="slider-nav" href="#slide-3" aria-label="Salto al slide3">Login</a>
@@ -34,11 +34,11 @@
      
       <img class="slide-img" src="../img/166877381-doctor-examinando-perro-golden-retriever-en-clínica-veterinaria.jpg" alt="Img1-Home"/>
       <div>
-        <p class="slide-text">Vet App, es una aplicación web que cuenta con simples cargas de datos en forma de formularios especialmente diseñados para la carga de datos de los animales, la informacion de contacto de sus dueños, el seguimiento de sus tratamientos, calendario de vacunación, estudios y prácticas.</p>
+        <p class="slide-text">Vet App, es una aplicación web que cuenta con simples cargas de datos en forma de formularios especialmente diseñados para la carga de datos de pacientes veterinarios, la informacion de contacto de sus dueños, el seguimiento de sus tratamientos, calendario de vacunación, estudios y prácticas.</p>
       </div>  
       <div >  
       <img class="slide-img" src="../img/veterinario-1.gif" alt=""/>
-      <p class="slide-text">Todos los estudios que son digitalizados, podran verse reflejados en el sistema no solo para el medico sino tambien para el dueño del animal ya que posee un login a la aplicacion con roles diferenciados.</p>
+      <p class="slide-text">Todos los estudios que son digitalizados, podran verse reflejados en el sistema no solo para el medico sino tambien para el dueño del paciente ya que posee un login a la aplicacion con roles diferenciados.</p>
       </div>
     </div>
     
@@ -85,26 +85,27 @@
     </div>
 
     <div class="slides-item slide-4" id="slide-4" aria-label="slide 4 of 4" tabindex="0">
-      <div>
+      <div >
       <h2>Contactenos</title>
       <p class="description">Por medio de este formulario puede ponerse en contacto con nosotros para utilizar nuestros sevicios o despejar las dudas que tenga.</p>
       <div><img class="slide-img" src="../img/canino.jpeg" alt=""/></div>
       </div>
 
       <form class="form-contacto">
+
         <div class="form-group">  
         <label id="name-label" for="name">Nombre Completo*</label>
-        <input id="name" class="form-control" type="text" name="name" placeholder="Juan perez" required>
+        <input id="name" class="form-control" type="text" name="name" placeholder="Juan Perez" onfocus="limpiaAvisoForm()" required>
         <div>
 
         <div class="form-group">
         <label id="email-label" for="email">Email*</label>
-        <input id="email" class="form-control" type="email" name="email"  placeholder="juanperez@gmail.com" required>
+        <input id="email" class="form-control" type="email" name="email" onfocus="limpiaAvisoForm()" placeholder="juanperez@gmail.com" required>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" >
         <label class="option-label">Que opcion lo describe mejor?*</label>
-        <select id="dropdown" name="role" class="form-control" required>
+        <select id="dropdown" name="role" class="form-control" onfocus="limpiaAvisoForm()"  required>
           <option disable selected value>Indique su opcion...</option>
             <option value="1">Veterinario/a</option>
             <option value="2">Administrador de Clinica</option>
@@ -129,15 +130,19 @@
         <label class="option-label">Dejenos un mensaje o su consulta.</label>
         <textarea id="comments" class="input-textarea" name="comment" placeholder="Ingrese aqui su comentario..."></textarea>
         </div>
-          
+
+        <div>
+          <p id="avisoForm" style="font-size: 14px; text-shadow: 0px 1px 1px; animation: animate 5s infinite linear;"></p>
+        </div>
+
         <div class="form-group">
-          <input id="submit" class="submit-button" type="submit">
+          <input id="submit" class="submit-button" type="button" onclick="validaContacto()" value="Enviar Consulta">
         </div>
     
       </form>
     </div>
   </div>
 </section>
-
+<script src="../js/form.js"></script>
 </body>
 </html>

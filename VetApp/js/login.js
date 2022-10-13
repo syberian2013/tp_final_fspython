@@ -1,58 +1,46 @@
-var user = document.getElementById("user")
+var conteoE = 0
+var userName = document.getElementById("user")
+var password = document.getElementById("pass")
+var avisoBadlogin = document.getElementById("aviso")
+var recupera = document.getElementById("recupera")
 
-function valida_login()
-alert("si");
-if (user.length = "") {
-    alert("vacio");
+
+// esta funcion borra los mensajes de aviso antes de escribir nuevamente valores
+function limpiaAviso(){
+    avisoBadlogin.style.opacity = 0
 }
 
-function valida_login2() {
-    //valido el nombre
-    if (document.form-login.user == 0) {
-        alert("Tiene que escribir su nombre")
-        document.form-login.user.focus()
-        return 0;
-    }
-
-    //valido la edad. tiene que ser entero mayor que 18
-    edad = document.fvalida.edad.value
-    edad = validarEntero(edad)
-    document.fvalida.edad.value = edad
-    if (edad == "") {
-        alert("Tiene que introducir un número entero en su edad.")
-        document.fvalida.edad.focus()
-        return 0;
+// esta funcion valida los datos de los campos del login y muestra un aviso si hay error
+function valida_login() {
+    valorUser = userName.value;
+    // chequea si el user o pass esta en blanco y llama al contador de errores
+if (userName.value == "" || password.value == "") {     
+    avisoBadlogin.style.opacity = 1
+    avisoBadlogin.textContent = "Las credenciales no pueden estar vacias"
+    conteoError();
+    
+    //verifica si el login es correcto con un usuario fijo (a cambiar por validacion de datos en servidor) y redirecciona a la aplicacion VetApp
+} else { 
+    if (userName.value == "admin" && password.value == "admin1") {
+        // console.log("login")
+        let Home2 = parent.location
+        Home2.href = "../barra-lateral/vetapp.html";
+    
+        // muestra el error por credenciales invalidas y llama al contador de errores
     } else {
-        if (edad < 18) {
-            alert("Debe ser mayor de 18 años.")
-            document.fvalida.edad.focus()
-            return 0;
-        }
+        avisoBadlogin.style.opacity = 1
+        avisoBadlogin.textContent = "Usuario o Contraseña Incorrectos"   
+        conteoError();
     }
+    
 
-    //valido el interés
-    if (document.fvalida.interes.selectedIndex == 0) {
-        alert("Debe seleccionar un motivo de su contacto.")
-        document.fvalida.interes.focus()
-        return 0;
+}  
+
+// funcion que cuenta los 3 errores de ingreso y muestra el texto para recupero de credenciales
+function conteoError(){
+    conteoE++;
+    if (conteoE == 3) {
+        recupera.style.opacity = 1
     }
-
-    //el formulario se envia
-    alert("Muchas gracias por enviar el formulario");
-    document.fvalida.submit();
 }
-
-function validarEntero(valor) {
-    //intento convertir a entero.
-    //si era un entero no le afecta, si no lo era lo intenta convertir
-    valor = parseInt(valor)
-
-    //Compruebo si es un valor numérico
-    if (isNaN(valor)) {
-        //entonces (no es numero) devuelvo el valor cadena vacia
-        return ""
-    } else {
-        //En caso contrario (Si era un número) devuelvo el valor
-        return valor
-    }
 }
