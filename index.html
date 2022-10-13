@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<!--    Redirigir al navegador a otra URL-->
+    <meta HTTP-EQUIV="REFRESH" CONTENT="5;URL=./VetApp/index.html">
+    <title> -LANDING- </title>    
+	<meta charset="UTF-8" />
+  	<meta name="viewport" content="width=device-width" />
+
+</head>
+
+<body>
+    <h1 style="text-align:center"> Esta página cambia en <span id="var_cont" style="color: #DD0000"></span> segundos al HOME</h1>
+		
+	<script>
+		var segundos = 5;
+		function actualizar(){
+			document.getElementById("var_cont").innerHTML = segundos;
+			if(segundos==0){
+		//		alert("El tiempo se acabo..");
+			}else{
+				segundos--;
+				setTimeout("actualizar()",1000);
+			}
+		}
+		setTimeout(actualizar(),1000);
+	</script>
+</body>
+
+</html>
