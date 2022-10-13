@@ -43,8 +43,11 @@
             <input type="text" size="30" name="nombrePaciente" id="nombrePaciente" placeholder=""> 
             <br>
             <br>
-            <label for="especie">Especie: </label>
-            <input type="text" size="30" name="especie" id="especie" placeholder="canino o felino"> 
+            <label for="especie">Especie:</label>
+            <select id="especie" name="especie">
+                <option disable selected value>Indique la especie...</option>
+                <option value="canino">Canino</option>
+                <option value="felino">Felino</option></select>
             <br>
             <br>
             <label for="raza">Raza: </label>
@@ -80,7 +83,7 @@
 
     </div>
     <div>
-        <img id = "imagenPaciente" alt = "Escriba &quot canino &quot o &quot felino &quot en el campo &quot 
+        <img id = "imagenPaciente" alt = "Seleccione &quot canino &quot o &quot felino &quot en el campo &quot 
         especie &quot y haga click en cargar foto" width = 300 height = auto>
         <br>
 
