@@ -5,17 +5,15 @@ var formName = document.getElementById("name")
 var formEmail = document.getElementById("email")
 var formRole = document.getElementById("dropdown")
 var avisoBadForm = document.getElementById("avisoForm")
-var anchor = document.getElementById("name-label") 
+var anchor = document.getElementById("avisoForm") 
 
 //vuelve invisible el aviso 
 function limpiaAvisoForm(){ 
-    console.log("limpiaAviso");
     avisoBadForm.style.opacity = 0
 }
 
 //checkea que los campos estén completos y scrolea para arriba
 function validaContacto(){
-    console.log("validaContacto");
     if (formName.value == "") { 
         avisoBadForm.style.opacity = 1
         avisoBadForm.textContent = "Por favor, indique su nombre completo"
