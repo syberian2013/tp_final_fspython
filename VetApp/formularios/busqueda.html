@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styles-form.css" />
+  <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico" />
+</head>
+
+<body>
+    <div>
+        <h2> Listado de consultas realizadas y buscador</h1>
+    </div>
+
+    <main>
+        <h3> Ultimas consultas </h3>
+        <form method="POST" enctype="text/plain">
+            <input type="text" size="30" name="fechaDesp" id="buscador" placeholder="Buscador">
+            <button onclick="filtrar()">Buscar</button>
+        </form>
+
+     
+        <div>
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <th>Propietario</th>
+                    <th>Edad</th>
+                    <th>Fecha de Ingreso</th>
+                </tr>
+                <tr>
+                    <td>Gato 1</td>
+                    <td>Común Europeo</td>
+                    <td>Propietario 1</td>
+                    <td># años</td>
+                    <td>dd/mm/aa</td>
+                </tr>
+                <tr>
+                    <td>Perro 1</td>
+                    <td>Labrador</td>
+                    <td>Propietario 2</td>
+                    <td># años</td>
+                    <td>dd/mm/aa</td>
+                </tr>
+                <tr>
+                    <td>Gato 2</td>
+                    <td>Ruso Azul</td>
+                    <td>Propietario 3</td>
+                    <td># años</td>
+                    <td>dd/mm/aa</td>
+                </tr>
+                <tr>
+                    <td>Perro 2</td>
+                    <td>Mestizo</td>
+                    <td>Propietario 4</td>
+                    <td># años</td>
+                    <td>dd/mm/aa</td>
+                </tr>
+                <tr>
+                    <td>Perro 3</td>
+                    <td>Pointer</td>
+                    <td>Propietario 5</td>
+                    <td># años</td>
+                    <td>dd/mm/aa</td>
+                </tr>    
+        </table>
+        <button onclick="seleccionar()">Seleccionar</button>
+        </div>
+    </main>
+    
+   
+</body>
+</html>

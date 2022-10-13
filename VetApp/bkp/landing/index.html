@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+      <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico"/>
+    <link rel="stylesheet" href="styles.css" />
+    <title> - VetApp Home - </title>
+  
+</head>
+
+
+<body id="principal">
+  
+  <div class="carousel__nav">
+    <div><img class="slide-img" src="../img/logo-vetapp.jpg" alt="VetApp" style="height:80px;width:80px;border-radius:50%;"/></div>
+    <a class="slider-nav" href="#slide-1" aria-label="Salto al slide1">Home</a>
+    <a class="slider-nav" href="#slide-2" aria-label="Salto al slide2">About</a>
+    <a class="slider-nav" href="#slide-3" aria-label="Salto al slide3">Login</a>
+    <a class="slider-nav" href="#slide-4" aria-label="Salto al slide4">Contacto</a>
+    
+  </div>
+
+<section class="carousel" aria-label="carousel" Tabindex="0">
+  <div class="slides">
+    <div class="slides-item slide-1" id="slide-1" aria-label="slide 1 of 4" tabindex="0">
+      <div>
+        <h2>Bienvenido a VetApp</h3>
+        <p class="description">Nuestro sistema es una herramienta integral que engloba todo lo que un medico veterinario/a puede necesitar</p>
+      </div>
+     
+      <img class="slide-img" src="../img/166877381-doctor-examinando-perro-golden-retriever-en-clínica-veterinaria.jpg" alt="Img1-Home"/>
+      <div>
+        <p class="slide-text">Vet App, es una aplicación web que cuenta con simples cargas de datos en forma de formularios especialmente diseñados para la carga de datos de los animales, la informacion de contacto de sus dueños, el seguimiento de sus tratamientos, calendario de vacunación, estudios y prácticas.</p>
+      </div>  
+      <div >  
+      <img class="slide-img" src="../img/veterinario-1.gif" alt=""/>
+      <p class="slide-text">Todos los estudios que son digitalizados, podran verse reflejados en el sistema no solo para el medico sino tambien para el dueño del animal ya que posee un login a la aplicacion con roles diferenciados.</p>
+      </div>
+    </div>
+    
+    <div class="slides-item slide-2" id="slide-2" aria-label="slide 2 of 4" tabindex="0">
+      <div>
+        <h2>VetApp como herramienta</h3>
+      </div>
+      <img class="slide-img" src="../img/istock-185973964.jpg" alt=""/>
+      <div>
+        <p class="slide-text">Esta aplicación es de suma utilidad para el veterinario en la práctica cotidiana, al tener centralizada toda la información necesaria para su asistencia. Fácil de actualizar y evita el extravío de estudios que podrían ser relevantes para el diagnóstico.</p>
+      </div>
+      <div>
+        <img class="slide-img" src="../img/Veterinarios.png" alt=""/>
+      </div>  
+      <div>
+      <p class="slide-text">Conoce a los que hicieron posible VetApp y ponte en contacto con ellos desde nuestro formulario de contacto para despejar tus dudas y para saber como acceder a esta herramienta para su uso.</p>
+      </div>
+      <div class="ceos">
+        <div id="agus" class="ceo-1">
+          <img class="ceo-img" src="../img/Agus.png"/>
+          <h2>Agustina Desiderio</h2>
+          <p class="ceo-txt">Soy estudiante avanzada de la carrera Actuario en Economía en la Universidad de Buenos Aires. Hoy en día trabajo para una empresa multinacional en el área de contabilidad. Recientemente me fui introduciendo en lo que respecta a la programación. Mi principal objetivo es la aplicación, en el ámbito laboral, de las herramientas aprendidas en el curso.
+          </p>
+        </div>
+        <div  id="ciro" class="ceo-2">
+          <img class="ceo-img" src="../img/Ciro.png"/>
+          <h2>Ciro Martínez</h2>
+          <p class="ceo-txt">Soy Técnico de Grabación y Sonido, y estudiante avanzado de Ingeniería de Sonido en la Universidad Nacional de Tres de Febrero. Tuve la oportunidad de dar mis primeros pasos en el mundo de la programación, con la pasantía “Desarrollos en Acústica Subacuática” de la Fundación Cethus. Actualmente, aspiro lograr desempeñarme como desarrollador de software y hardware en el campo de la acústica subacuática.</p>
+        </div>
+        <div  id="cris" class="ceo-3">
+          <img class="ceo-img" src="../img/Cristian.png"/>
+          <h2>Cristian Rico</h2>
+          <p class="ceo-txt">Soy SysAdmin Linux/Windows Sr. en el Gobierno de la Ciudad de Buenos Aires. Tambien Tecnico de Electronica de Aeronaves, Analista de Sistemas y Desarrollador en varios lenguajes entre otros. Considero necesario el continuo aprendizaje para poder lograr una mejora constante en el entorno laboral como en mis futuros proyectos.
+            </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slides-item slide-3" id="slide-3" aria-label="slide 3 of 4" tabindex="0">
+      <div class="iframe-login"> 
+        <iframe id="iframe-login" class="iframe" src="login.html" name="iframe-login" title="iframe-login" scrolling="none" ;></iframe>
+      </div>
+    </div>
+
+    <div class="slides-item slide-4" id="slide-4" aria-label="slide 4 of 4" tabindex="0">
+      <div>
+      <h2>Contactenos</title>
+      <p class="description">Por medio de este formulario puede ponerse en contacto con nosotros para utilizar nuestros sevicios o despejar las dudas que tenga.</p>
+      <div><img class="slide-img" src="../img/canino.jpeg" alt=""/></div>
+      </div>
+
+      <form class="form-contacto">
+        <div class="form-group">  
+        <label id="name-label" for="name">Nombre Completo*</label>
+        <input id="name" class="form-control" type="text" name="name" placeholder="Juan perez" onfocus="limpiaAvisoForm()" required>
+        <div>
+
+        <div class="form-group">
+        <label id="email-label" for="email">Email*</label>
+        <input id="email" class="form-control" type="email" name="email" onfocus="limpiaAvisoForm()" placeholder="juanperez@gmail.com" required>
+        </div>
+
+        <div class="form-group">
+        <label class="option-label">Que opcion lo describe mejor?*</label>
+        <select id="dropdown" name="role" class="form-control" onfocus="limpiaAvisoForm()" required>
+          <option disable selected value>Indique su opcion...</option>
+            <option value="1">Veterinario/a</option>
+            <option value="2">Administrador de Clinica</option>
+            <option value="3">Otro</option>
+        </select>
+        <div>
+          <p id="avisoForm" style="font-size: 14px; text-shadow: 0px 1px 1px; animation: animate 5s infinite linear;"></p>
+        </div>
+        </div>  
+
+        <div class="form-group">
+          <p>Como llego a nosotros?</p>
+          <label> 
+            <input class="input-radio" name="radiobutton" type="radio" value="opcionA" checked>Recomendacion de un profesional
+          </label>
+          <label>
+            <input class="input-radio" name="radiobutton" type="radio" value="opcionB">Un aviso publicitario
+          </label>
+          <label>  
+            <input class="input-radio" name="radiobutton" type="radio" value="opcionC">Por Internet
+          </label>  
+        </div>
+        
+        <div class="form-group">  
+        <label class="option-label">Dejenos un mensaje o su consulta.</label>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Ingrese aqui su comentario..."></textarea>
+        </div>
+          
+        <div class="form-group">
+          <input id="submit" class="submit-button" type="submit" onclick="validaContacto()">
+        </div>
+    
+      </form>
+    </div>
+  </div>
+</section>
+<script src="./form.js"></script>
+</body>
+</html>

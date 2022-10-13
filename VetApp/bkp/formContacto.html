@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Formulario de Contacto</title>
+  <meta charset="UTF-8">
+  <link href="styles-form.css" rel="stylesheet">
+</head>
+
+<body>
+
+    
+    <header class="header">
+      <h1 id="title" class="text-center">Contactenos</title>
+      <p id="description" class="description text-center">Por medio de este formulario puede ponerse en contacto con nosotros para utilizar nuestros sevicios</p>
+    </header>
+    
+    <div>
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">Nombre Completo*</label>
+        <input id="name" class="form-control" type="text" name="name" placeholder="Nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label id="email-label" for="email">Email*</label>
+        <input id="email" type="email" name="email" class="form-control" placeholder="Email?" required>
+      </div>
+
+      <div class="form-group">
+          <p>Que opcion lo describe mejor?*</p>
+          <select id="dropdown" name="role" class="form.control" required>
+            <option disable selected value>Indique su opcion...</option>
+            <option value="1">Veterinario/a</option>
+            <option value="2">Administrador de Clinica</option>
+            <option value="3">Otro</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+        <p>Como llego a nosotros?</p>
+        <label> 
+          <input class="input-radio" name="radiobutton" type="radio" value="opcionA" checked>Recomendacion de un profesional
+        </label>
+        <label>
+          <input class="input-radio" name="radiobutton" type="radio" value="opcionB">Un aviso publicitario
+        </label>
+        <label>  
+          <input class="input-radio" name="radiobutton" type="radio" value="opcionC">Por Internet
+        </label>  
+      </div>
+
+      <div class="form-group">
+        <p>Dejenos un mensaje o su consulta.</p>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Ingrese aqui su comentario..."></textarea>
+      </div>
+      
+      <div class="form-group">
+        <input id="submit" class="submit-button" type="submit">
+      </div>
+
+    </form>
+    </div>
+  
+</body>
+
+
+</html>
+
