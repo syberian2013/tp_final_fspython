@@ -44,7 +44,7 @@
             <br>
             <br>
             <label for="especie">Especie: </label>
-            <input type="text" size="30" name="especie" id="especie" placeholder=""> 
+            <input type="text" size="30" name="especie" id="especie" placeholder="canino o felino"> 
             <br>
             <br>
             <label for="raza">Raza: </label>
@@ -80,7 +80,8 @@
 
     </div>
     <div>
-        <img src="https://cdn2.thecatapi.com/images/5ra.jpg" width = 300 height = auto>
+        <img id = "imagenPaciente" alt = "Escriba &quot canino &quot o &quot felino &quot en el campo &quot 
+        especie &quot y haga click en cargar foto" width = 300 height = auto>
         <br>
 
         <button onclick="cargarFoto()">Cargar foto</button>
@@ -88,6 +89,29 @@
 
     <button onclick="guardarDatos()">Guardar datos</button>
     
+<script>
 
+    var especie = document.getElementById("especie");
+    const imgPac = document.getElementById("imagenPaciente")
+    const URLDog = "https://api.thedogapi.com/v1/images/search";
+    const URLCat = "https://api.thecatapi.com/v1/images/search";
+    
+    function cargarFoto(){
+        if (especie.value == "felino"){
+            URL = URLCat
+            fetch(URL)
+                .then(respuesta => respuesta.json())
+                .then(strRespuesta => {imgPac.src = strRespuesta[0].url})
+        } else if (especie.value == "canino"){
+            URL = URLDog
+            fetch(URL)
+                .then(respuesta => respuesta.json())
+                .then(strRespuesta => {imgPac.src = strRespuesta[0].url})
+        } else if (especie.value == ""){
+            imgPac.alt = "Escriba canino o felino en especie y haga click en cargar foto"
+        }
+            
+    }
+</script>
 </body>
 </html>
