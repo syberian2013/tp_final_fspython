@@ -1,10 +1,8 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.navigation');
-const navbar = document.querySelector('.navbar');
 
 menuToggle.onclick = () => {
   navigation.classList.toggle('open');
-  navbar.classList.toggle('open');
 }
 
 const listItems = document.querySelectorAll('.list-item');

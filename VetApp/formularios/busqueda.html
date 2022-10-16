@@ -2,29 +2,39 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="styles-form.css" />
-  <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles-form.css" />
+    <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico" />
 </head>
 
 <body>
-    <div>
-        <h2> Listado de consultas realizadas y buscador</h1>
+
+    <div class="header text-center">
+        <h1> Buscador de consultas</h1>
+        <p class="description">Aqui puede realizar busquedas de consultas en la base de datos de los pacientes</p>
     </div>
 
-    <main>
-        <h3> Ultimas consultas </h3>
-        <form method="POST" enctype="text/plain">
-            <input type="text" size="30" name="fechaDesp" id="buscador" placeholder="Buscador">
-            <button onclick="filtrar()">Buscar</button>
-        </form>
+    <main class="container">
 
-     
-        <div>
-            <table>
+        <div class="div-center">
+            <!-- method="POST" enctype="text/plain" -->
+            <input class="input-text" type="text" name="fechaDesp" id="buscador" placeholder="Ingrese parametros">
+        </div>
+
+        <div class="div-center">
+            <button onclick="filtrar()">Buscar</button>
+        </div>
+
+
+
+        <h3 class="text-center"> Ultimas consultas realizadas </h3>
+        <div class="div-center-tabla">
+            <table >
+                
                 <tr>
+                    <th></th>
                     <th>Nombre</th>
                     <th>Raza</th>
                     <th>Propietario</th>
@@ -32,6 +42,7 @@
                     <th>Fecha de Ingreso</th>
                 </tr>
                 <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="1" checked></td>
                     <td>Gato 1</td>
                     <td>Común Europeo</td>
                     <td>Propietario 1</td>
@@ -39,6 +50,7 @@
                     <td>dd/mm/aa</td>
                 </tr>
                 <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="2"></td>
                     <td>Perro 1</td>
                     <td>Labrador</td>
                     <td>Propietario 2</td>
@@ -46,6 +58,7 @@
                     <td>dd/mm/aa</td>
                 </tr>
                 <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="3"></td>
                     <td>Gato 2</td>
                     <td>Ruso Azul</td>
                     <td>Propietario 3</td>
@@ -53,6 +66,7 @@
                     <td>dd/mm/aa</td>
                 </tr>
                 <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="4"></td>
                     <td>Perro 2</td>
                     <td>Mestizo</td>
                     <td>Propietario 4</td>
@@ -60,17 +74,24 @@
                     <td>dd/mm/aa</td>
                 </tr>
                 <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="5"></td>
                     <td>Perro 3</td>
                     <td>Pointer</td>
                     <td>Propietario 5</td>
                     <td># años</td>
                     <td>dd/mm/aa</td>
-                </tr>    
-        </table>
-        <button onclick="seleccionar()">Seleccionar</button>
+                </tr>
+            
+            </table>
         </div>
+
+        <div class="div-center">
+            <button class="submit-button" onclick="seleccionar()">Seleccionar</button>
+        </div>
+
     </main>
-    
-   
+
+    <script src="../js/busqueda.js"></script>
 </body>
+
 </html>
