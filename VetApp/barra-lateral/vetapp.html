@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <title>Home</title>
+  <title>-VetApp-</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,59 +12,90 @@
 
 <body>
 
-    <div class="container">
-      <div class="encabezado">
-        <h2>cabecera titular</h2>
+  <div class="container">
+    <div class="encabezado">
+      <div>
+        <h2>VetApp</h2>
       </div>
-      <div class="navigation">
-        <div class="menu-toggle"></div>
-        <ul class="list">
-          <li class="list-item active" style="--color:var(--color-azulado)"><a href="../formularios/busqueda.html" target="iframe-main">
-              <span class="icon material-symbols-sharp">pets</span>
-              <span class="text">Paciente</span>
-            </a>
-          </li>
-
-          <li class="list-item" style="--color:var(--color-azulado)"><a href="../formularios/nvoPaciente.html" target="iframe-main">
-              <span class="icon material-symbols-sharp">person</span>
-              <span class="text">Dueño</span>
-            </a>
-          </li>
-
-          <li class="list-item" style="--color:var(--color-azulado)"><a href="../login2/login.html" target="iframe-main">
-              <span class="icon material-symbols-sharp">biotech</span>
-              <span class="text">Estudios</span>
-            </a>
-          </li>
-
-          <li class="list-item" style="--color:var(--color-azulado)"><a href="formularios\datosDePaciente.html" target="iframe-main">
-              <span class="icon material-symbols-sharp">calendar_month</span>
-              <span class="text">Calendario</span>
-            </a>
-          </li>
-
-          <li class="list-item" style="--color:var(--color-azulado)"><a href="../../formulario-full.html" target="iframe-main">
-              <span class="icon material-symbols-sharp">handyman</span>
-              <span class="text">Opciones</span>
-            </a>
-          </li>
-
-           <li class="list-item" style="--color:var(--color-azulado)"><a href="index3.html" target="iframe-main">
-              <span class="icon material-symbols-sharp">mode_off_on</span>
-              <span class="text">Salir</span>
-            </a>
-          </li> 
-
-        </ul>
+      <div>
+        <img class="logo-img" style="width:70px;height:70px;border-radius: 50%" src="../img/logo-vetapp.jpg"
+          alt="VetApp" />
       </div>
-      
-      <div class="mainframe">
-        <iframe id="iframe-main" class="iframe" src="../formularios/busqueda.html" name="iframe-main" title="iframe-main" scrolling="yes" ;></iframe>
+      <div>
+        <h4>Doctor asignado: <span id="nombreDr">ROBERTO GOMEZ BOLAÑOS</span></h4>
       </div>
-      
+    </div>
+    <!--   <div class="logo-img">
+
+
+       <h2>VetApp</h2>
+        <h3><span class="icon material-symbols-sharp">person</span>Usuario</h3> 
+    </div>-->
+
+
+    <div class="navigation">
+      <div class="menu-toggle"></div>
+      <ul class="list">
+        <li class="list-item active" style="--color:var(--color-azulado)"><a href="../formularios/busqueda.html"
+            target="iframe-main">
+            <span class="icon material-symbols-sharp">search</span>
+            <span class="text">Busqueda</span>
+          </a>
+        </li>
+
+        <li class="list-item" style="--color:var(--color-azulado)"><a href="../formularios/nvoPaciente.html"
+            target="iframe-main">
+            <span class="icon material-symbols-sharp">pets</span>
+            <span class="text">Paciente</span>
+          </a>
+        </li>
+
+        <li class="list-item" style="--color:var(--color-azulado)"><a href="../formularios/nvaVac.html"
+            target="iframe-main">
+            <span class="icon material-symbols-sharp">vaccines</span>
+            <span class="text">Vacunas</span>
+          </a>
+        </li>
+
+        <li class="list-item" style="--color:var(--color-azulado)"><a href="../formularios/nvaDesp.html"
+            target="iframe-main">
+            <span class="icon material-symbols-sharp">pest_control</span>
+            <span class="text">Desparacit.</span>
+          </a>
+        </li>
+
+        <!-- <li class="list-item" style="--color:var(--color-azulado)"><a href="../formularios/nvaDesp.html"
+            target="iframe-main">
+            <span class="icon material-symbols-sharp">calendar_month</span>
+            <span class="text">Calendario</span>
+          </a>
+        </li> -->
+
+        <!-- <li class="list-item" style="--color:var(--color-azulado)"><a href="../../formulario-full.html"
+            target="iframe-main">
+            <span class="icon material-symbols-sharp">handyman</span>
+            <span class="text">Opciones</span>
+          </a>
+        </li> -->
+
+        <li class="list-item" style="--color:var(--color-azulado)"><a href="index3.html" target="iframe-main">
+            <span class="icon material-symbols-sharp">mode_off_on</span>
+            <span class="text">Salir</span>
+          </a>
+        </li>
+
+      </ul>
     </div>
 
-  
+    <div class="mainframe">
+
+      <iframe id="iframe-main" class="iframe" src="../formularios/busqueda.html" name="iframe-main" title="iframe-main"
+        scrolling="yes" ;></iframe>
+    </div>
+
+  </div>
+
+
   <script src="script.js"></script> <!-- script para animacion de botones del menu -->
 </body>
 

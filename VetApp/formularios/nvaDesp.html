@@ -2,51 +2,52 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="styles-form.css" />
-  <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles-form.css" />
+    <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico" />
 </head>
 
 <body>
-    <form action ="mailto: crmartinez93@hotmail.com.ar" method="POST" enctype="text/plain">
+    <!-- <form action ="mailto: crmartinez93@hotmail.com.ar" method="POST" enctype="text/plain"> -->
+    <main class="container">
+        <form class="text-center">
+            <label for="fechaDesp">Fecha vacunación </label>
+            <input class="input-text" type="date" size="30" name="fechaDesp" id="fechaVac">
 
-        <label for="fechaDesp">Fecha vacunación </label>
-            <input type="date" size="30" name="fechaDesp" id="fechaVac">
-        <div>
-            <br>
-            <br>
             <label for="desparacitacion">Tipo: </label>
-            <input type="radio" name="desparacitacion" value="1" checked > Comprimidos
-            <input type="radio" name="desparacitacion" value="2" > Inyectable
-            <input type="radio" name="desparacitacion" value="3" > Externo
-            <input type="radio" name="desparacitacion" value="4" > Suspención oral
-            <input type="radio" name="desparacitacion" value="5" > Otro
-            <br>
-            <br>
+            <div class="div-center-column">
+                <div class="div-inline">
+                    <input class="input-radio" type="radio" name="desparacitacion" value="1" checked> <label>Comprimidos</label>
+                </div>
+                <div class="div-inline">
+                    <input class="input-radio" type="radio" name="desparacitacion" value="2"><label>Inyectable</label> 
+                </div>
+                <div class="div-inline">
+                    <input class="input-radio" type="radio" name="desparacitacion" value="3"><label>Externo</label>
+                </div>
+                <div class="div-inline">
+                    <input class="input-radio" type="radio" name="desparacitacion" value="4"><label>Suspención oral</label> 
+                </div>
+                <div class="div-inline">
+                    <input class="input-radio" type="radio" name="desparacitacion" value="5"><label>Otro</label>
+                </div>
+            </div>
 
-        </div> 
-        <br>
-        <br>
-        <div>
-            <label for="marcaDesp">Marca</label>
-            <input type="text" size="30" name="marcaDesp id="marcaDesp>
-        </div>
-        <br>
-        <br>
-        <div>
-            <label for="pesoDesp">Peso [kg]</label>
-            <input type="number" size="30" name="pesoDesp" id="pesoDesp">
-        </div>
-        <br>
-        <br>  
-        <div>
-            <p>Detalles:</p>
-                <textarea name ="detallesDesp" rows = "5" cols= "150" placeholder="Detalles de la desparacitación"></textarea>
-        </div>
-        <br>
-        <br>     
-    </form>
+                <label for="marcaDesp">Marca</label>
+                <input class="input-text" type="text" size="30" name="marcaDesp id=" marcaDesp>
+
+                <label for="pesoDesp">Peso [kg]</label>
+                <input class="input-text-short" type="number" size="30" name="pesoDesp" id="pesoDesp">
+
+
+                <p>Detalles:</p>
+                <textarea name="detallesDesp" rows="5" cols="150"
+                    placeholder="Detalles de la desparacitación"></textarea>
+
+        </form>
+    </main>
 </body>
+
 </html>

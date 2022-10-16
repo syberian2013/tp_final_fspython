@@ -2,95 +2,101 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="styles-form.css" />
-  <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles-form.css" />
+    <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico" />
 </head>
 
 <body>
-    <header>
+    <!-- <header class="text-center">
         <a href="nvaCons.html">Nueva Consulta</a>
         <a href="nvaVac.html">Nueva Vacuna</a>
         <a href="nvaDesp.html">Nueva Desparacitación</a>
-    </header>
-    <!--Datos del dueño para displayar en una tabla, formulario o lugar de la página-->
-    <h3>Datos propietario</h3>
-    <div>
-        <form action ="" method="POST" enctype="text/plain">
-            
+    </header> -->
+
+    <main class="container">
+        <!--Datos del dueño para mostrar en una tabla, formulario o lugar de la página-->
+        <h3>Datos propietario</h3>
+
+        <div class="div-center">
+            <!-- <form action="" method="POST" enctype="text/plain"> -->
+
             <label for="apellidoYNombre">Apellido y nombre: </label>
-            <input type="text" size="30" name="apellidoYNombre" id="apellidoYNombre" placeholder=""> 
-            <br>
-            <br>
+            <input class="input-text" type="text" size="30" name="apellidoYNombre" id="apellidoYNombre" placeholder="">
+
             <label for="direccion">Dirección: </label>
-            <input type="text" size="30" name="direccion" id="direccion" placeholder=""> 
-            <br>
-            <br>
+            <input class="input-text" type="text" size="30" name="direccion" id="direccion" placeholder="">
+
             <label for="telefono">Teléfono: </label>
-            <input type="text" size="30" name="telefono" id="telefono" placeholder="">
-            <br>
-            <br>
-        </form>
-    </div>
+            <input class="input-text" type="text" size="30" name="telefono" id="telefono" placeholder="">
 
-    <!--Datos del paciente para displayar en una tabla, formulario o lugar de la página-->
 
-    <h3>Datos paciente</h3>
+        </div>
 
-    <div>
-        <form action ="" method="POST" enctype="text/plain">
-            
+
+        <h3>Datos paciente</h3>
+
+        <div class="div-center">
+            <div style="margin-bottom:10px">
+            <img class="img-paciente" id="imagenPaciente" alt="img-paciente">
+            </div>
+            <div class="div-inline">
+                <input class="input-radio" type="radio" id="canino" name="especie" value="canino"><label>CANINO</label>
+                <input class="input-radio" type="radio" id="felino" name="especie" value="felino"><label>FELINO</label>
+            </div>
+            <button onclick="cargarFoto()">Cargar foto</button>
+
+
+            <!-- <form action="" method="POST" enctype="text/plain"> -->
+
+
             <label for="nombrePaciente">Nombre: </label>
-            <input type="text" size="30" name="nombrePaciente" id="nombrePaciente" placeholder=""> 
-            <br>
-            <br>
-            <label for="especie">Especie: </label>
-            <input type="text" size="30" name="especie" id="especie" placeholder=""> 
-            <br>
-            <br>
+            <input class="input-text" type="text" size="30" name="nombrePaciente" id="nombrePaciente" placeholder="">
+
+            <!-- <label for="especie2">Especie: </label>
+            <input class="input-text" type="text" size="30" name="especie2" id="especie2" placeholder="canino o felino"> -->
+
             <label for="raza">Raza: </label>
-            <input type="text" size="30" name="raza" id="raza" placeholder="">
-            <br>
-            <br>
+            <input class="input-text" type="text" size="30" name="raza" id="raza" placeholder="">
+
             <label for="fechaNac">Fecha de Nacimiento: </label>
-            <input type="date" size="30" name="fechaNac" id="fechaNac" placeholder="">
-            <br>
-            <br>
+            <input class="input-text" type="date" size="30" name="fechaNac" id="fechaNac" placeholder="">
+
             <label for="edad">Edad: </label>
-            <input type="text" size="30" name="edad" id="edad" placeholder="">
-            <br>
-            <br>
+            <input class="input-text" type="text" size="30" name="edad" id="edad" placeholder="">
+
             <label for="peso">Peso [kg]: </label>
-            <input type="text" size="30" name="peso" id="peso" placeholder="">
-            <br>
-            <br>
+            <input class="input-text" type="text" size="30" name="peso" id="peso" placeholder="">
+
             <label for="sexo">Sexo: </label>
-            <input type="radio" name="sexo" value="1" checked > Hembra
-            <input type="radio" name="sexo" value="2" > Macho
-            <br>
-            <br>
+            <div class="div-inline">
+                <input class="input-radio" type="radio" name="sexo" value="H" checked><label>HEMBRA</label>
+                <input class="input-radio" type="radio" name="sexo" value="M"> <label>MACHO</label>
+            </div>
+
             <label for="adopcion">¿Está en adopción?: </label>
-            <input type="radio" name="adopcion" value="1" checked > Si
-            <input type="radio" name="adopcion" value="2" > no
-            <br>
-            <br>
+            <div class="div-inline">
+                <input class="input-radio" type="radio" name="adopcion" value="1" checked><label>SI</label>
+                <input class="input-radio" type="radio" name="adopcion" value="2"><label>NO</label>
+            </div>
+
             <label for="castracion">¿Está castrado/a?: </label>
-            <input type="radio" name="castracion" value="1" checked > Si
-            <input type="radio" name="castracion" value="2" > no
-        </form>
+            <div class="div-inline">
+                <input class="input-radio" type="radio" name="castracion" value="1" checked><label>SI</label>
+                <input class="input-radio" type="radio" name="castracion" value="2"><label>NO</label>
+            </div>
 
-    </div>
-    <div>
-        <img src="https://cdn2.thecatapi.com/images/5ra.jpg" width = 300 height = auto>
-        <br>
 
-        <button onclick="cargarFoto()">Cargar foto</button>
-    </div>
+        </div>
 
-    <button onclick="guardarDatos()">Guardar datos</button>
-    
+        <div class="div-center">
+            <button class="submit-button" onclick="guardarDatos()">Guardar datos</button>
+        </div>
 
+    </main>
+    <script src="../js/api-img.js"></script>
 </body>
+
 </html>
