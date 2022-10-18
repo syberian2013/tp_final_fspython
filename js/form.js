@@ -1,6 +1,5 @@
-// form contacto
-
 //variables creadas para checkear el correcto llenado del formulario
+var formBtn = document.getElementById("submit2")
 var formName = document.getElementById("name")
 var formEmail = document.getElementById("email")
 var formRole = document.getElementById("dropdown")
@@ -14,6 +13,7 @@ function limpiaAvisoForm(){
 
 //checkea que los campos estén completos y scrolea para arriba
 function validaContacto(){
+    console.log("validacion de datos !!!!")
     if (formName.value == "") { 
         avisoBadForm.style.opacity = 1
         avisoBadForm.textContent = "Por favor, indique su nombre completo"
@@ -30,6 +30,9 @@ function validaContacto(){
         avisoBadForm.style.opacity = 1
         avisoBadForm.textContent = "Por favor, indique qué opción lo describe mejor"
         anchor.scrollIntoView({behavior: "smooth"});   
+    } else {
+        console.log("correcto, se envian datos de form")
+        formBtn.click();
     }
 }
 

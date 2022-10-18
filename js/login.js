@@ -7,11 +7,13 @@ var recupera = document.getElementById("recupera")
 
 // esta funcion borra los mensajes de aviso antes de escribir nuevamente valores
 function limpiaAviso(){
+    // console.log("limpiaAviso")
     avisoBadlogin.style.opacity = 0
 }
 
 // esta funcion valida los datos de los campos del login y muestra un aviso si hay error
 function valida_login() {
+    // console.log("validaLogin")
     valorUser = userName.value;
     // chequea si el user o pass esta en blanco y llama al contador de errores
 if (userName.value == "" || password.value == "") {     
