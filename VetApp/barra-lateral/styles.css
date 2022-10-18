@@ -186,8 +186,7 @@ body::before {
 .navigation ul {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  /* separacion de iconos V */
+  gap: 2px;/* separacion de iconos V */
   width: 100%;
 
 }
@@ -339,12 +338,32 @@ body::before {
     transform: translatey(5px);
   }
 
+  .mainframe.open {
+    margin-left: 0;
+  }
+  
   .mainframe {
     min-height: 100px;
     inset: 170px 20px 10px 20px;
     overflow: visible;
   }
 
+  .navigation.open {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    inset: 0px 5px 0 10px;
+    min-width: 300px;
+    width: 96%;
+    height: 45px;
+    transition: 0.3s;
+      
+  }
+
+  .navigation.open ul li a .text {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @media all and (max-width: 480px) {

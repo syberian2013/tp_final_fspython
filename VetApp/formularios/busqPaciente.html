@@ -41,50 +41,50 @@
                 </tr>
                 <tr>
                     <td><input class="input-radio" name="radiobutton" type="radio" value="1" checked></td>
-                    <td>Gato 1</td>
-                    <td>Común Europeo</td>
-                    <td>Propietario 1</td>
-                    <td># años</td>
-                    <td>dd/mm/aa</td>
+                    <td>Fito</td>
+                    <td>Pastor Ingles</td>
+                    <td>Juan Pérez</td>
+                    <td>12 años</td>
+                    <td>15/05/2022</td>
                 </tr>
                 <tr>
                     <td><input class="input-radio" name="radiobutton" type="radio" value="2"></td>
-                    <td>Perro 1</td>
-                    <td>Labrador</td>
-                    <td>Propietario 2</td>
-                    <td># años</td>
-                    <td>dd/mm/aa</td>
+                    <td>Toti</td>
+                    <td>Común europeo</td>
+                    <td>Cacho Fontana</td>
+                    <td>10 meses</td>
+                    <td>14/05/2022</td>
                 </tr>
                 <tr>
                     <td><input class="input-radio" name="radiobutton" type="radio" value="3"></td>
-                    <td>Gato 2</td>
-                    <td>Ruso Azul</td>
-                    <td>Propietario 3</td>
-                    <td># años</td>
-                    <td>dd/mm/aa</td>
+                    <td>Petete</td>
+                    <td>Cocker Spaniel</td>
+                    <td>Bob Dylan</td>
+                    <td>7 años</td>
+                    <td>13/05/2022</td>
                 </tr>
                 <tr>
                     <td><input class="input-radio" name="radiobutton" type="radio" value="4"></td>
-                    <td>Perro 2</td>
-                    <td>Mestizo</td>
-                    <td>Propietario 4</td>
-                    <td># años</td>
-                    <td>dd/mm/aa</td>
+                    <td>Lameloide</td>
+                    <td>Común europeo</td>
+                    <td>Martín Fierro</td>
+                    <td>1 año y medio</td>
+                    <td>12/05/2022</td>
                 </tr>
                 <tr>
                     <td><input class="input-radio" name="radiobutton" type="radio" value="5"></td>
-                    <td>Perro 3</td>
-                    <td>Pointer</td>
-                    <td>Propietario 5</td>
-                    <td># años</td>
-                    <td>dd/mm/aa</td>
+                    <td>Martita</td>
+                    <td>Pug</td>
+                    <td>Carlín Calvo</td>
+                    <td>10 años</td>
+                    <td>11/05/2022</td>
                 </tr>
 
             </table>
         </div>
-
+        
         <div class="div-center">
-            <button class="submit-button" type="button" onclick="mostrar()" href="#mostrarDatos">Seleccionar</button>
+            <button class="submit-button" type="button" onclick="mostrarPaciente()" href="#mostrarDatos">Seleccionar</button>
         </div>
 
         <div class="mostrarDatos">
@@ -106,7 +106,7 @@
 
                 <div class="div-center">
                     <div style="margin-bottom:10px">
-                        <img class="img-paciente" id="imagenPaciente" alt="img-paciente">
+                        <img class="img-paciente" id="imagenPaciente" alt="">
                     </div>
                     <div class="div-inline">
                         <input class="input-radio" type="radio" id="canino" name="especie"
@@ -114,9 +114,8 @@
                         <input class="input-radio" type="radio" id="felino" name="especie"
                             value="felino"><label>FELINO</label>
                     </div>
-                    <button onclick="cargarFoto()">Cargar foto</button>
-
-
+                    <!--<button>Cargar foto</button>-->
+                    
                     <!-- <form action="" method="POST" enctype="text/plain"> -->
 
 
@@ -131,7 +130,7 @@
                     <input class="input-text" type="text" size="30" name="raza" id="raza" placeholder="">
 
                     <label for="fechaNac">Fecha de Nacimiento: </label>
-                    <input class="input-text" type="date" size="30" name="fechaNac" id="fechaNac" placeholder="">
+                    <input class="input-text" type="text" size="30" name="fechaNac" id="fechaNac" placeholder="">
 
                     <label for="edad">Edad: </label>
                     <input class="input-text" type="text" size="30" name="edad" id="edad" placeholder="">
@@ -141,28 +140,31 @@
 
                     <label for="sexo">Sexo: </label>
                     <div class="div-inline">
-                        <input class="input-radio" type="radio" name="sexo" value="H" checked><label>HEMBRA</label>
-                        <input class="input-radio" type="radio" name="sexo" value="M"> <label>MACHO</label>
+                        <input class="input-radio" type="radio" name="sexo" value="hembra" ><label>HEMBRA</label>
+                        <input class="input-radio" type="radio" name="sexo" value="macho"> <label>MACHO</label>
                     </div>
 
                     <label for="adopcion">¿Está en adopción?: </label>
                     <div class="div-inline">
-                        <input class="input-radio" type="radio" name="adopcion" value="1" checked><label>SI</label>
-                        <input class="input-radio" type="radio" name="adopcion" value="2"><label>NO</label>
+                        <input class="input-radio" type="radio" name="adopcion" value="si" ><label>SI</label>
+                        <input class="input-radio" type="radio" name="adopcion" value="no"><label>NO</label>
                     </div>
 
                     <label for="castracion">¿Está castrado/a?: </label>
                     <div class="div-inline">
-                        <input class="input-radio" type="radio" name="castracion" value="1" checked><label>SI</label>
-                        <input class="input-radio" type="radio" name="castracion" value="2"><label>NO</label>
+                        <input class="input-radio" type="radio" name="castracion" value="si" ><label>SI</label>
+                        <input class="input-radio" type="radio" name="castracion" value="no"><label>NO</label>
                     </div>
 
 
                 </div>
+                
+                <!--
 
                 <div class="div-center">
                     <button class="submit-button" onclick="guardarDatos()">Guardar datos</button>
                 </div>
+                -->
 
             </div>
         </div>
