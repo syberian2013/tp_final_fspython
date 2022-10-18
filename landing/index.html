@@ -114,14 +114,19 @@
             <div><img class="slide-img" src="../img/canino.jpeg" alt="" /></div>
         </div>
 
-        <form action="https://formsubmit.co/zoireilausasa-2553@yopmail.com" method="POST" class="form-contacto"/>
-        <input type="hidden" name="_next" value="https://tp-final-cursada22501-web-vete.netlify.app/landing/gracias.html">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_autoresponse" value="Gracias por enviarnos su consulta, en breve nos contactaremos con ud. por este mail para resolver sus dudas, Saludos de parte de VetApp !">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_cc" value="crmartinez93@hotmail.com.ar,cristian.g.rico@gmail.com">
-
-        <div>
+        <form action="https://formsubmit.co/zoireilausasa-2553@yopmail.com" method="POST" class="form-contacto"
+          id="form-contacto">
+          <div>
+            <input type="hidden" name="_next"
+              value="https://tp-final-cursada22501-web-vete.netlify.app/landing/gracias.html">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_autoresponse"
+              value="Gracias por enviarnos su consulta, en breve nos contactaremos con ud. por este mail para resolver sus dudas, Saludos de parte de VetApp !">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_cc" value="crmartinez93@hotmail.com.ar,cristian.g.rico@gmail.com">
+          </div>
+          
+          <div>
             <p id="avisoForm" style="font-size: 14px; text-shadow: 0px 1px 1px; animation: animate 5s infinite linear;">
             </p>
           </div>
@@ -130,48 +135,52 @@
             <label id="name-label" for="name">Nombre Completo*</label>
             <input id="name" class="form-control" type="text" name="Nombre" placeholder="Juan Perez"
               onfocus="limpiaAvisoForm()" required>
-            <div>
+          </div>
 
-              <div class="form-group">
-                <label id="email-label" for="email">Email*</label>
-                <input id="email" class="form-control" type="email" name="email" onfocus="limpiaAvisoForm()"
-                  placeholder="juanperez@gmail.com" required>
-              </div>
+          <div class="form-group">
+            <label id="email-label" for="email">Email*</label>
+            <input id="email" class="form-control" type="email" name="email" onfocus="limpiaAvisoForm()"
+              placeholder="juanperez@gmail.com" required>
+          </div>
 
-              <div class="form-group">
-                <label class="option-label">Que opcion lo describe mejor?*</label>
-                <select id="dropdown" name="Rol" class="form-control" onfocus="limpiaAvisoForm()" required>
-                  <option disable selected value>Indique su opcion...</option>
-                  <option value="Veterinario">Veterinario/a</option>
-                  <option value="Administrador">Administrador de Clinica</option>
-                  <option value="Otro">Otro</option>
-                </select>
-              </div>
+          <div class="form-group">
+            <label class="option-label">Que opcion lo describe mejor?*</label>
+            <select id="dropdown" name="Rol" class="form-control" onfocus="limpiaAvisoForm()" required>
+              <option disable selected value>Indique su opcion...</option>
+              <option value="Veterinario">Veterinario/a</option>
+              <option value="Administrador">Administrador de Clinica</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
 
-              <div class="form-group">
-                <p>Como llego a nosotros?</p>
-                <label>
-                  <input class="input-radio" name="formaDeContacto" type="radio" value="Recomendacion" checked>Recomendacion de un
-                  profesional
-                </label>
-                <label>
-                  <input class="input-radio" name="formaDeContacto" type="radio" value="Aviso">Un aviso publicitario
-                </label>
-                <label>
-                  <input class="input-radio" name="formaDeContacto" type="radio" value="Internet">Por Internet
-                </label>
-              </div>
+          <div class="form-group">
+            <p>Como llego a nosotros?</p>
+            <label>
+              <input class="input-radio" name="formaDeContacto" type="radio" value="Recomendacion" checked>Recomendacion
+              de un
+              profesional
+            </label>
+            <label>
+              <input class="input-radio" name="formaDeContacto" type="radio" value="Aviso">Un aviso publicitario
+            </label>
+            <label>
+              <input class="input-radio" name="formaDeContacto" type="radio" value="Internet">Por Internet
+            </label>
+          </div>
 
-              <div class="form-group">
-                <label class="option-label">Dejenos un mensaje o su consulta.</label>
-                <textarea id="comments" class="input-textarea" name="comentario"
-                  placeholder="Ingrese aqui su comentario..."></textarea>
-              </div>
+          <div class="form-group">
+            <label class="option-label">Dejenos un mensaje o su consulta.</label>
+            <textarea id="comments" class="input-textarea" name="comentario"
+              placeholder="Ingrese aqui su comentario..."></textarea>
+          </div>
 
-              <div class="form-group">
-                <input id="submit" class="submit-button" type="submit" onclick="validaContacto()"
-                  value="Enviar Consulta">
-              </div>
+          <div class="form-group">
+            <!-- boton para hacer comprobacion de datos en web-->
+            <input id="submit" class="submit-button" type="button" onclick="validaContacto()" value="Enviar Consulta">
+
+            <!-- boton real para hacer el POST -->
+            <input id="submit2" type="submit" onclick="submit" value="Enviar Consulta" hidden>
+          </div>
 
         </form>
       </div>
