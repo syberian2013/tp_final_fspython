@@ -3,6 +3,7 @@
   --color-darkblue: #1b1b32;
   --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
   --color-green: #37af65;
+  --color-green2: #2c8950;
 }
 
 ::before {
@@ -72,6 +73,18 @@ main {
   justify-content: center;
   /* margin-bottom: 5px; */
   
+}
+
+#buscador {
+  background-size: 14px;
+  background-image: url('../img/lupa.png');
+  background-position: 5px 3px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+.mostrarDatos {
+  display: none;
 }
 
 h1,
@@ -157,6 +170,10 @@ textarea{
   border-radius: 20px;
 }
 
+.submit-button:hover {
+  background-color: var(--color-green2);
+}
+
 .img-paciente {
 
   width: 200px;
@@ -188,11 +205,12 @@ td {
 }
 
 
-@media (max-width: 480px) {
+
+@media all and (max-width: 480px) {
 
   .container {
     width: 100%;
-    min-width: 300px;
+    min-width: 350px;
     max-width: 450px;
 
   }
@@ -217,7 +235,7 @@ td {
   
 }
 
-@media (min-width: 480px) and (max-width: 700px) {
+@media all and (min-width: 480px) and (max-width: 700px) {
 
   .container{
     width: 100%;
@@ -230,7 +248,7 @@ td {
   }
 }
 
-@media (min-width: 700px) {
+@media all and (min-width: 700px) {
 
   .container{
     width: 100%;
