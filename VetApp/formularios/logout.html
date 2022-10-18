@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles-form.css" />
+    <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico" />
+</head>
+
+<body>
+    <div class="div-center">
+        <h3>Desea salir de VetApp ?</h3>
+        <button class="submit-button" onclick="salir()" style="background:#dd0000;">Salir</button>
+        <button class="submit-button" onclick="volver()">Cancelar</button>
+    </div>
+
+    <script>
+        function salir() {
+            let Home = parent.location
+            Home.href = "https://tp-final-cursada22501-web-vete.netlify.app";
+            //agregar variable de logoff en la sesion para el usuario
+
+        }
+        function volver() {
+            let Home = parent.location
+            Home.href = "../barra-lateral/vetapp.html";
+
+        }
+    </script>
+</body>
+
+</html>

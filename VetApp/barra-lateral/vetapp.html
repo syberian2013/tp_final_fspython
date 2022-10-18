@@ -15,35 +15,30 @@
   <div class="container">
     <div class="encabezado">
       <div>
-        <h2>VetApp</h2>
-      </div>
-      <div>
         <img class="logo-img" style="width:70px;height:70px;border-radius: 50%" src="../img/logo-vetapp.jpg"
           alt="VetApp" />
+        <h2 class="logo-txt">VetApp</h2>
       </div>
-      <div>
-        <h4>Doctor asignado: <span id="nombreDr">ROBERTO GOMEZ BOLAÑOS</span></h4>
+      <div class="separador">
+        <h4><span class="icon material-symbols-sharp">person</span>Doctor asignado: <span id="nombreDr">ROBERTO GOMEZ
+            BOLAÑOS</span></h4>
+
+            <span class="icon material-symbols-sharp">schedule</span><span id="date" onload="currentTime()"></span><span id="clock" onload="currentTime()"></span>
       </div>
+      <!-- <div onclick="cerrarNav()">HOLA</div> -->
     </div>
-    <!--   <div class="logo-img">
-
-
-       <h2>VetApp</h2>
-        <h3><span class="icon material-symbols-sharp">person</span>Usuario</h3> 
-    </div>-->
-
 
     <div class="navigation">
       <div class="menu-toggle"></div>
       <ul class="list">
-        <li class="list-item active" style="--color:var(--color-azulado)"><a href="../formularios/busqueda.html"
+        <li class="list-item active" style="--color:var(--color-azulado)"><a href="../formularios/busqConsulta.html"
             target="iframe-main">
             <span class="icon material-symbols-sharp">search</span>
             <span class="text">Busqueda</span>
           </a>
         </li>
 
-        <li class="list-item" style="--color:var(--color-azulado)"><a href="../formularios/nvoPaciente.html"
+        <li class="list-item" style="--color:var(--color-azulado)"><a href="../formularios/busqPaciente.html"
             target="iframe-main">
             <span class="icon material-symbols-sharp">pets</span>
             <span class="text">Paciente</span>
@@ -78,7 +73,7 @@
           </a>
         </li> -->
 
-        <li class="list-item" style="--color:var(--color-azulado)"><a href="index3.html" target="iframe-main">
+        <li class="list-item" style="--color:var(--color-azulado)"><a href="../formularios/logout.html" target="iframe-main">
             <span class="icon material-symbols-sharp">mode_off_on</span>
             <span class="text">Salir</span>
           </a>
@@ -89,14 +84,17 @@
 
     <div class="mainframe">
 
-      <iframe id="iframe-main" class="iframe" src="../formularios/busqueda.html" name="iframe-main" title="iframe-main"
+      <iframe id="iframe-main" class="iframe" src="../formularios/busqConsulta.html" name="iframe-main" title="iframe-main"
         scrolling="yes" ;></iframe>
     </div>
 
   </div>
+  <!-- script que crea el reloj -->
+  <script src="../js/reloj.js"></script>
 
+  <!-- script para animacion de botones del menu -->
+  <script src="script.js"></script>
 
-  <script src="script.js"></script> <!-- script para animacion de botones del menu -->
 </body>
 
 </html>
