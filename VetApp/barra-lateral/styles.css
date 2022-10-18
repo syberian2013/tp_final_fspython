@@ -25,7 +25,18 @@
 
 }
 
-body {
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   background: var(--color-gradiente);
 }
 
@@ -39,7 +50,7 @@ body {
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
-  overflow: hidden;
+  overflow: visible;
   z-index: 1;
   background-color: transparent;
 
@@ -53,6 +64,8 @@ body {
   width: 100%;
   height: 100%;
   border-style: none;
+  overflow: visible;
+  border-radius: 20px;
 }
 
 .encabezado {
@@ -100,7 +113,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 1;
 
 }
 
@@ -174,8 +186,7 @@ body {
 .navigation ul {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  /* separacion de iconos V */
+  gap: 2px;/* separacion de iconos V */
   width: 100%;
 
 }
@@ -307,17 +318,12 @@ body {
     display: flex;
     position: relative;
     flex-direction: row;
-    /* align-items: center;
-    align-content: center; */
     inset: 0px 5px 0 10px;
     min-width: 300px;
-    width: 97vw;
-    height: 50px;
-    /* background: var(--color-beige); */
-    /* transition: 0.3s; */
-    justify-content: space-evenly;
-    /* border-radius: 30px; */
-    /* overflow: hidden; */
+    width: 96%;
+    height: 45px;
+    transition: 0.3s;
+    /* justify-content: space-evenly; */
 
 
   }
@@ -329,15 +335,35 @@ body {
   }
 
   .navigation ul li.active {
-    transform: translatey(10px);
+    transform: translatey(5px);
   }
 
+  .mainframe.open {
+    margin-left: 0;
+  }
+  
   .mainframe {
-    margin-top: 80px;
-    margin-left: -50px;
+    min-height: 100px;
+    inset: 170px 20px 10px 20px;
+    overflow: visible;
   }
 
+  .navigation.open {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    inset: 0px 5px 0 10px;
+    min-width: 300px;
+    width: 96%;
+    height: 45px;
+    transition: 0.3s;
+      
+  }
 
+  .navigation.open ul li a .text {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @media all and (max-width: 480px) {
@@ -360,8 +386,6 @@ body {
   }
 
 }
-
-
 
 @media all and (min-width: 768px) and (max-width: 1096px) {
   .container {

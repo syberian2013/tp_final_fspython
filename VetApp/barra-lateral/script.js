@@ -7,11 +7,6 @@ menuToggle.onclick = () => {
   mainframe.classList.toggle('open');
 }
 
-function cerrarNav() {
-  navigation.classList.remove('open');
-  mainframe.classList.remove('open');
-}
-
 const listItems = document.querySelectorAll('.list-item');
 listItems.forEach(item => {
   item.onclick = () => {
@@ -19,3 +14,5 @@ listItems.forEach(item => {
     item.classList.add('active');
   }
 }) 
+
+

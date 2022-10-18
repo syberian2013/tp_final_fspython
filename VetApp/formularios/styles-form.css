@@ -20,8 +20,6 @@ body {
   color: var(--color-white);
   margin: 0;
   min-width: 400px;
-  align-items: center;
-  align-content: center;
 }
 
 main {
