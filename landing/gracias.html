@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta HTTP-EQUIV="REFRESH" CONTENT="5,URL=index.html">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <title> - Gracias - </title>
+
+</head>
+
+<body id="principal" style="justify-content:center;">
+    <div style="text-align:center;font-size: 1.5rem;">
+        <h1>Contactenos</h1>
+        <p style="text-align:center;justify-content:center;" >Gracias por enviarnos su consulta, en breve nos contactaremos con ud. por este mail para
+            resolver sus dudas, Saludos de parte de VetApp !</p>
+        
+        <p style="text-align:center;justify-content:center;" >En <span id="var_cont" style="color:var(--color-naranja);">5 segundos</span> sera reenviado a la web principal, si no es redireccionado haga click en la imagen.</p>
+        
+        <h2 style="font-size: 1rem;background-color:rgba(27, 27, 50, 0.1);" onclick="volver()">Volver al sitio VetApp
+        </h2>
+        <div><img class="slide-img" src="../img/gatos-y-perros-gracias.jpg" alt="Gracias!" onclick="volver()" /></div>
+    </div>
+    <script>
+        function volver() {
+            console.log("volver");
+            let Home = this.location;
+            Home.href = "index.html";
+        }
+    </script>
+    <script src="../js/contador.js"></script>
+</body>
+
+</html>
