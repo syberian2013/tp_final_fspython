@@ -2,30 +2,69 @@
 <html lang="es">
 
 <head>
-<!--    Redirigir al navegador a otra URL-->
-    <meta HTTP-EQUIV="REFRESH" CONTENT="5;URL=./VetApp/index.html">
-    <title> -LANDING- </title>    
+	<!--    Redirigir al navegador a otra URL-->
+	<meta HTTP-EQUIV="REFRESH" CONTENT="3,URL=./landing/index.html">
+	<title> -LANDING REDIRECT- </title>
 	<meta charset="UTF-8" />
-  	<meta name="viewport" content="width=device-width" />
-
+	<meta name="viewport" content="width=device-width" />
 </head>
+<style>
+
+    body {
+        background-color: #111827;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .loader {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        display: flex;
+    }
+
+    .circle {
+        background: deepskyblue;
+        width: 20px;
+        height: 20px;
+        margin: 0 4px;
+        border-radius: 50%;
+        animation: animate 2s infinite linear;
+    }
+
+    .circle:nth-child(1) {
+        animation-delay: 0.5s;
+    }
+
+    .circle:nth-child(2) {
+        animation-delay: 1s;
+    }
+
+    .circle:nth-child(3) {
+        animation-delay: 1.5s;
+    }
+
+    @keyframes animate {
+
+        0%,
+        100% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+    }
+</style>
 
 <body>
-    <h1 style="text-align:center"> Esta página cambia en <span id="var_cont" style="color: #DD0000"></span> segundos al HOME</h1>
-		
-	<script>
-		var segundos = 5;
-		function actualizar(){
-			document.getElementById("var_cont").innerHTML = segundos;
-			if(segundos==0){
-		//		alert("El tiempo se acabo..");
-			}else{
-				segundos--;
-				setTimeout("actualizar()",1000);
-			}
-		}
-		setTimeout(actualizar(),1000);
-	</script>
+    <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
 </body>
 
 </html>

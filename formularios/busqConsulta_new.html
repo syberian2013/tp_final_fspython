@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles-form.css" />
+    <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico" />
+</head>
+
+<body>
+
+    <div class="header text-center">
+        <h1> Buscador de consultas</h1>
+        <p class="description">Aqui puede realizar busquedas de consultas en la base de datos de los pacientes</p>
+    </div>
+
+    <main class="container">
+
+        <div class="div-center">
+            <!-- method="POST" enctype="text/plain" -->
+            <input class="input-text" type="text" name="fechaDesp" id="buscador" placeholder="Ingrese parametros"
+                autofocus>
+        </div>
+
+        <div class="div-center">
+            <button onclick="filtrarConsultas()">Buscar</button>
+        </div>
+
+        <h3 class="text-center"> Ultimas consultas realizadas </h3>
+        <div class="div-center-tabla">
+            <table id="tablaBusqueda">
+                <thead>
+                    <tr>
+                        <th>sel</th>
+                        <th>Nombre</th>
+                        <th>Raza</th>
+                        <th>Propietario</th>
+                        <th>Edad</th>
+                        <th>Fecha de Ingreso</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaBusquedaResp">
+                    <tr>
+                        <td><input class="input-radio" name="radiobutton" type="radio" value="1" checked></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="div-center">
+            <button class="submit-button" type="button" onclick="mostrarConsulta()"
+                href="#mostrarDatos">Seleccionar</button>
+        </div>
+
+        <div class="mostrarDatos">
+            <form class="text-center">
+
+                <label>Motivo de consulta</label>
+                <textarea name="motivoConsulta" rows="5" cols="150" placeholder="Motivo de la consulta"
+                    id="motivo"></textarea>
+
+                <label>Anamnesis</label>
+
+                <textarea name="anamnesis" rows="5" cols="150" placeholder="Lo que describe el dueño"
+                    id="anamnesis"></textarea>
+
+
+                <h3>Exámen objetivo General</h3>
+
+
+                <label>Mucosas: </label>
+                <input class="input-text-short" type="text" name="mucosas" id="mucosas" placeholder="color" min="0"
+                    max="100">
+
+
+                <label>Linfonódulos</label>
+                <textarea name="linfoNod" rows="5" cols="150" placeholder="Posición y estado de linfonódulos"
+                    id="linfo"></textarea>
+
+
+                <label for="hidratacion">Hidratación [%]: </label>
+                <input class="input-text-short" type="text" name="hidratacion" id="hidratacion"
+                    placeholder="% de hidratación" min="0" max="100">
+
+                <label for="temperatura">Temperatura [°C]: </label>
+                <input class="input-text-short" type="text" size="30" name="temperatura" id="temperatura"
+                    placeholder="temp. en °C" min="20" max="45">
+
+                <label for="frecCard">Frecuencia cardíaca [latidos/min]: </label>
+                <input class="input-text-short" type="text" size="30" name="frecCard" id="frecCard"
+                    placeholder="Latidos/min" min="20" max="400">
+
+                <label for="frecResp">Frecuencia Respiratoria [resp/min]: </label>
+                <input class="input-text-short" type="text" size="30" name="frecResp" id="frecResp"
+                    placeholder="resp./min" min="10" max="150">
+
+                <label for="pulso">Pulso: </label>
+                <input class="input-text-short" type="text" size="30" name="pulso" id="pulso" placeholder="descripción"
+                    min="10" max="150">
+
+
+                <h3>Exámen objetivo particular</h3>
+
+
+                <label>Otros detalles:</label>
+                <textarea name="otrosDetalles" rows="5" cols="150" placeholder="Descripción pormenorizada"
+                    id="detalles"></textarea>
+
+                <h3>Diagnóstico</h3>
+                <textarea name="diagnostico" rows="5" cols="150" placeholder="Diagnostico" id="diagno"></textarea>
+
+
+                <h3>Tratamiento</h3>
+                <textarea name="tratamiento" rows="5" cols="150" placeholder="Tratamiento a seguir"
+                    id="tratamiento"></textarea>
+
+
+                <h3>Indicaciones</h3>
+                <textarea class="input-textarea" name="indicaciones" rows="5" cols="150" placeholder="Indicaciones"
+                    id="indicaciones"></textarea>
+
+                <label for="control">Control: </label>
+                <div class="div-inline">
+                    <input class="input-radio" type="radio" name="control" value="2" checked><label>NO</label>
+                    <input class="input-radio" type="radio" name="control" value="1"><label>SI</label>
+                </div>
+
+                <label for="proxCont">Proximo control </label>
+
+                <input class="input-text" type="text" size="30" name="proxCont" id="proxCont"
+                    placeholder="Fecha proximo control">
+
+                <!---
+                    <div>
+                        <button class="submit-button">AGREGAR</button>
+                    </div>
+                    -->
+            </form>
+        </div>
+
+    </main>
+
+    <script src="../js/busqueda.js"></script>
+</body>
+
+</html>
