@@ -1,6 +1,6 @@
 var segundos = 5;
 function actualizar(){
-	document.getElementById("var_cont").innerHTML = segundos + " texto";
+	document.getElementById("var_cont").innerHTML = segundos;
 	if(segundos==0){
 //		alert("El tiempo se acabo..");
 	}else{
