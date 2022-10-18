@@ -13,14 +13,15 @@
 
     <div class="header text-center">
         <h1> Buscador de Pacientes y Dueños</h1>
-        <p class="description">Aqui puede realizar busquedas sobre los datos de pacientes para ver sus datos</p>
+        <p class="description">Aqui puede realizar busquedas de pacientes para ver sus datos</p>
     </div>
 
     <main class="container">
 
         <div class="div-center">
             <!-- method="POST" enctype="text/plain" -->
-            <input class="input-text" type="text" name="fechaDesp" id="buscador" placeholder="Ingrese parametros" autofocus>
+            <input class="input-text" type="text" name="fechaDesp" id="buscador" placeholder="Ingrese parametros"
+                autofocus>
         </div>
 
         <div class="div-center">
@@ -82,15 +83,18 @@
 
             </table>
         </div>
-        
+
         <div class="div-center">
-            <button class="submit-button" type="button" onclick="mostrarPaciente()" href="#mostrarDatos">Seleccionar</button>
+            <button class="submit-button" type="button" onclick="mostrarPaciente()"
+                href="#mostrarDatos">Seleccionar</button>
         </div>
 
-        <div class="mostrarDatos">
-            <h3>Datos propietario</h3>
+        
+            <div class="mostrarDatos">
+                <div class="div-center">
+                <h3>Datos propietario</h3>
 
-            <div class="div-center">
+
                 <!-- <form action="" method="POST" enctype="text/plain"> -->
 
                 <label for="apellidoYNombre">Apellido y nombre: </label>
@@ -102,6 +106,7 @@
 
                 <label for="telefono">Teléfono: </label>
                 <input class="input-text" type="text" size="30" name="telefono" id="telefono" placeholder="">
+
                 <h3>Datos paciente</h3>
 
                 <div class="div-center">
@@ -115,7 +120,7 @@
                             value="felino"><label>FELINO</label>
                     </div>
                     <!--<button>Cargar foto</button>-->
-                    
+
                     <!-- <form action="" method="POST" enctype="text/plain"> -->
 
 
@@ -140,25 +145,25 @@
 
                     <label for="sexo">Sexo: </label>
                     <div class="div-inline">
-                        <input class="input-radio" type="radio" name="sexo" value="hembra" ><label>HEMBRA</label>
+                        <input class="input-radio" type="radio" name="sexo" value="hembra"><label>HEMBRA</label>
                         <input class="input-radio" type="radio" name="sexo" value="macho"> <label>MACHO</label>
                     </div>
 
                     <label for="adopcion">¿Está en adopción?: </label>
                     <div class="div-inline">
-                        <input class="input-radio" type="radio" name="adopcion" value="si" ><label>SI</label>
+                        <input class="input-radio" type="radio" name="adopcion" value="si"><label>SI</label>
                         <input class="input-radio" type="radio" name="adopcion" value="no"><label>NO</label>
                     </div>
 
                     <label for="castracion">¿Está castrado/a?: </label>
                     <div class="div-inline">
-                        <input class="input-radio" type="radio" name="castracion" value="si" ><label>SI</label>
+                        <input class="input-radio" type="radio" name="castracion" value="si"><label>SI</label>
                         <input class="input-radio" type="radio" name="castracion" value="no"><label>NO</label>
                     </div>
 
 
                 </div>
-                
+
                 <!--
 
                 <div class="div-center">
