@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="styles-form.css" />
     <link rel="icon" type="image/x-icon" href="../img/casa-de-perro.ico" />
-
 </head>
 
 <body>
+
     <div class="header text-center">
         <h1> Buscador de Pacientes y Dueños</h1>
         <p class="description">Aqui puede realizar busquedas de pacientes para ver sus datos</p>
@@ -20,77 +20,78 @@
 
         <div class="div-center">
             <!-- method="POST" enctype="text/plain" -->
-
-            <input class="input-text" type="text" name="buscador" id="buscador" placeholder="Ingrese parametros"
+            <input class="input-text" type="text" name="fechaDesp" id="buscador" placeholder="Ingrese parametros"
                 autofocus>
-
-            <div class="div-center aviso" id="msgBQ"></div>
-            <div class="div-center-tabla">
-                <table id="tablaBusqueda">
-                    <thead>
-                        <tr>
-                            <th><input class="input-radio" name="radiobuttonBQ" type="radio" value="bqId"></th>
-                            <th><input class="input-radio" name="radiobuttonBQ" type="radio" value="bqNombre"
-                                    checked="checked"></th>
-                            <th><input class="input-radio" name="radiobuttonBQ" type="radio" value="bqRaza"></th>
-                            <th><input class="input-radio" name="radiobuttonBQ" type="radio" value="bqPropietario"></th>
-                            <th><input class="input-radio" name="radiobuttonBQ" type="radio" value="bqEdad"></th>
-                            <th><input class="input-radio" name="radiobuttonBQ" type="radio" value="bqFechaIng"></th>
-                        </tr>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Raza</th>
-                            <th>Propietario</th>
-                            <th>Edad</th>
-                            <th>Fecha de Ingreso</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
         </div>
 
         <div class="div-center">
-            <button onclick="Buscar()">Buscar</button>
-        </div>
-        <div class="div-center">
-            <button onclick="getBusqueda()">Carga max 10 consultas como referencia</button>
-        </div>
-        <div class="div-center">
-            <button onclick="limpiarTabla()">Limpiar tabla y Datos</button>
+            <button onclick="filtrar()">Buscar</button>
         </div>
 
-        <h3 class="text-center"> Resultado de la busqueda: </h3>
+        <h3 class="text-center"> Ultimas consultas realizadas </h3>
+        <div class="div-center-tabla">
+            <table>
 
-        <!-- <div class="div-center"> -->
-        <div class="div-center-tabla aviso" id="msgBQ2"></div>
-        <table id="tablaBusqueda">
-            <thead>
                 <tr>
                     <th></th>
-                    <th>ID</th>
                     <th>Nombre</th>
                     <th>Raza</th>
                     <th>Propietario</th>
                     <th>Edad</th>
                     <th>Fecha de Ingreso</th>
                 </tr>
-            </thead>
-            <tbody id="tablaBusquedaResp">
-                <!-- <tr>
-                        <td><input class="input-radio" name="radiobutton" type="radio" value="1"></td>
-                    </tr> -->
-            </tbody>
-        </table>
-        <!-- </div> -->
+                <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="1" checked></td>
+                    <td>Fito</td>
+                    <td>Pastor Ingles</td>
+                    <td>Juan Pérez</td>
+                    <td>12 años</td>
+                    <td>15/05/2022</td>
+                </tr>
+                <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="2"></td>
+                    <td>Toti</td>
+                    <td>Común europeo</td>
+                    <td>Cacho Fontana</td>
+                    <td>10 meses</td>
+                    <td>14/05/2022</td>
+                </tr>
+                <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="3"></td>
+                    <td>Petete</td>
+                    <td>Cocker Spaniel</td>
+                    <td>Bob Dylan</td>
+                    <td>7 años</td>
+                    <td>13/05/2022</td>
+                </tr>
+                <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="4"></td>
+                    <td>Lameloide</td>
+                    <td>Común europeo</td>
+                    <td>Martín Fierro</td>
+                    <td>1 año y medio</td>
+                    <td>12/05/2022</td>
+                </tr>
+                <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="5"></td>
+                    <td>Martita</td>
+                    <td>Pug</td>
+                    <td>Carlín Calvo</td>
+                    <td>10 años</td>
+                    <td>11/05/2022</td>
+                </tr>
+
+            </table>
+        </div>
 
         <div class="div-center">
-            <button class="submit-button btnSeleccion" type="button" id="btnSeleccion" onclick="mostrarInfo()"
+            <button class="submit-button" type="button" onclick="mostrarPaciente()"
                 href="#mostrarDatos">Seleccionar</button>
         </div>
 
-        <div class="mostrarDatos">
-            <div class="div-center">
+        
+            <div class="mostrarDatos">
+                <div class="div-center">
                 <h3>Datos propietario</h3>
 
 
@@ -126,6 +127,9 @@
                     <label for="nombrePaciente">Nombre: </label>
                     <input class="input-text" type="text" size="30" name="nombrePaciente" id="nombrePaciente"
                         placeholder="">
+
+                    <!-- <label for="especie2">Especie: </label>
+                    <input class="input-text" type="text" size="30" name="especie2" id="especie2" placeholder="canino o felino"> -->
 
                     <label for="raza">Raza: </label>
                     <input class="input-text" type="text" size="30" name="raza" id="raza" placeholder="">
@@ -172,7 +176,7 @@
 
     </main>
 
-    <script src="../js/busqPac.js"></script>
+    <script src="../js/busqueda.js"></script>
 </body>
 
 </html>

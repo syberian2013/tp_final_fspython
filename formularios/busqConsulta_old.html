@@ -13,7 +13,7 @@
 
     <div class="header text-center">
         <h1> Buscador de consultas</h1>
-        <p class="description">Aqui puede realizar busquedas de consultas en la base de datos de los pacientes</p>
+        <p class="description">Aqui puede realizar busquedas sobre consultas realizadas en la base de datos de los pacientes</p>
     </div>
 
     <main class="container">
@@ -25,28 +25,61 @@
         </div>
 
         <div class="div-center">
-            <button onclick="filtrarConsultas()">Buscar</button>
+            <button onclick="filtrar()">Buscar</button>
         </div>
 
         <h3 class="text-center"> Ultimas consultas realizadas </h3>
         <div class="div-center-tabla">
-            <table id="tablaBusqueda">
-                <thead>
-                    <tr>
-                        <th>sel</th>
-                        <th>Nombre</th>
-                        <th>Raza</th>
-                        <th>Propietario</th>
-                        <th>Edad</th>
-                        <th>Fecha de Ingreso</th>
-                    </tr>
-                </thead>
-                <tbody id="tablaBusquedaResp">
-                    <tr>
-                        <td><input class="input-radio" name="radiobutton" type="radio" value="1" checked></td>
-                    </tr>
-                    
-                </tbody>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <th>Propietario</th>
+                    <th>Edad</th>
+                    <th>Fecha de Ingreso</th>
+                </tr>
+                <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="1" checked></td>
+                    <td>Fito</td>
+                    <td>Pastor Ingles</td>
+                    <td>Juan Pérez</td>
+                    <td>12 años</td>
+                    <td>15/05/2022</td>
+                </tr>
+                <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="2"></td>
+                    <td>Toti</td>
+                    <td>Común europeo</td>
+                    <td>Cacho Fontana</td>
+                    <td>10 meses</td>
+                    <td>14/05/2022</td>
+                </tr>
+                <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="3"></td>
+                    <td>Petete</td>
+                    <td>Cocker Spaniel</td>
+                    <td>Bob Dylan</td>
+                    <td>7 años</td>
+                    <td>13/05/2022</td>
+                </tr>
+                <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="4"></td>
+                    <td>Lameloide</td>
+                    <td>Común europeo</td>
+                    <td>Martín Fierro</td>
+                    <td>1 año y medio</td>
+                    <td>12/05/2022</td>
+                </tr>
+                <tr>
+                    <td><input class="input-radio" name="radiobutton" type="radio" value="5"></td>
+                    <td>Martita</td>
+                    <td>Pug</td>
+                    <td>Carlín Calvo</td>
+                    <td>10 años</td>
+                    <td>11/05/2022</td>
+                </tr>
+
             </table>
         </div>
 
@@ -67,9 +100,7 @@
                 <textarea name="anamnesis" rows="5" cols="150" placeholder="Lo que describe el dueño"
                     id="anamnesis"></textarea>
 
-
                 <h3>Exámen objetivo General</h3>
-
 
                 <label>Mucosas: </label>
                 <input class="input-text-short" type="text" name="mucosas" id="mucosas" placeholder="color" min="0"
