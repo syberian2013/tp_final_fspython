@@ -299,7 +299,6 @@ body::before {
 @media all and (max-height: 550px) {
 
   .navigation ul {
-
     width: 260px;
     position: absolute;
     justify-content: left;
@@ -323,15 +322,11 @@ body::before {
     width: 96%;
     height: 45px;
     transition: 0.3s;
-    /* justify-content: space-evenly; */
-
-
   }
 
   .navigation ul li {
     width: 50px;
     justify-content: left;
-
   }
 
   .navigation ul li.active {
