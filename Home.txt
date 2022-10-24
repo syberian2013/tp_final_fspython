@@ -1,0 +1,38 @@
+Sobre el landing/home de VetApp (index.html):
+
+Estructura general:
+
+El home o landing de VetApp es consiste en un sitio de 4 secciones navegables siguiendo el estilo slide (una página con 4 secciones ancladas).
+La navegación puede realizarse haciendo click en enlaces que se encuentran en la parte superior de la página, con las teclas derecha o izquierda del teclado,
+o deslizando en los mismos sentidos con un dispositivo touch screen.
+
+Las 4 secciones son: Home, About, Login y Contacto.
+
+Home:
+
+Consiste de imágenes representativas y texto que describe brevemente la aplicación y a quién va orientada.
+
+About:
+
+Incluye imágenes, descripción publicitaria del sitio e información, y fotografías y descripción de quienes desarrollaron el sitio.
+
+Login:
+
+Esta sección se desarrolla incluyendo un iframe en la cual se encuentra el formulario propiamente dicho (login.html). El usuario y contraseña que permiten el acceso 
+correcto son admin y admin1 respectivamente. Dejar los campos vacíos o incluir información erronea (usuarios o contraseñas diferentes a los dados) genera el 
+despliegue de mensajes de validación con animación incluida. Los mismos hacen referencia a la procedencia del error (campos vacíos o información incorrecta). 
+Además, al tercer intento se despliega una opción de recuperación de credenciales, hasta el momento simbólica. Por último, se incluye una animación en el fondo del 
+botón que comanda el ingreso al sitio. 
+
+Contacto:
+
+Esta sección incluye un formulario de contacto que presenta 3 campos obligatorios. Los mismos se encuentran oportunamente validados ante un nombre, correo o descripción 
+vacía o erronea. La validación incluye una animación similar a la utilizada en la instancia de login.
+En esta sección se utiliza una API externa (https://formsubmit.co) que resuelve el envío de mails con información requerida y opcional de contacto tanto a casillas
+de correo predeterminadas, como a la casilla que se coloca en el campo "Email".
+Por último, cuando se cuando se envía el pedido de contacto, el usuario es redirigido a una página de espera (gracias.html), también resuelto mediante la API
+anteriormente mencionada. Esta página incluye un agradecimiento a quien envía el formulario, quien será redirigido al home luego de 5 segundos o haciendo
+click en un hipervínculo. 
+
+
+
