@@ -60,8 +60,6 @@ function Buscar() {
   msgBQ.innerHTML = "";
   ocultar();
   txtBusq = btnBusq.value.toUpperCase();
-  // console.log("btnBusq.value", btnBusq.value);
-  // console.log("txtBusq", txtBusq);
 
   let txtBQisEmpty = btnBusq.value;
 
@@ -81,8 +79,6 @@ function Buscar() {
     for (let i in rabtnBQ) {
       if (rabtnBQ[i].checked == true) {
         idBusq = rabtnBQ[i].value;
-        // console.log("idBusq22", idBusq);
-        // break;
       }
     }
 
@@ -95,15 +91,10 @@ function Buscar() {
 
         // vacio la tabla antes de escribir nuevos valores de la respuesta de busqueda
         limpiarTabla();
-        // console.log("idBusq antes del switch", idBusq);
-        // console.log("txtBusq antes del switch", txtBusq);
 
         if (idBusq == "bqId") {
           if (Number(txtBusq) <= post.length) {
             let txtBusq2 = txtBusq;
-            // console.log("typo de datos", typeof post);
-            // console.log("typo de datos1", typeof txtBusq2);
-            // console.log("escribe tabla", post, txtBusq2);
             escribirTabla(post, txtBusq2);
           } else {
             throw "El numero ingresado no es un ID valido";
@@ -155,7 +146,6 @@ function Buscar() {
             }
           });
         }
-        // console.log("idBusq despues del switch", idBusq);
 
         // muestro boton de seleccionar
         mostrarbtnSeleccion.classList.remove("btnSeleccion");
