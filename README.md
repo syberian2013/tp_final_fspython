@@ -12,7 +12,6 @@ Especialmente diseñado para un facil uso en veterinarias, con acceso mediante r
 Al llegar a la URL del sitio primero se accede al Home con las secciones de About, Login, Contacto, y es dentro de **LOGIN** donde luego se accede a la web app que contiene la aplicacion principal para el uso del veterinario.
 ***Mas abajo se detallan las credenciales para su acceso.***
 
-<br>
 ## Landing y Home
 
 <h3>Sobre el landing/home de VetApp (index.html):</h3>
