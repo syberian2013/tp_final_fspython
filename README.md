@@ -56,7 +56,7 @@ Esta página de agreadecimiento incluye un saludo a quien envía el formulario, 
 Esta aplicacion web cuenta con la carga de datos de pacientes y sus dueños, a su vez indica los datos clinicos, consultas, vacunaciones, y mucho mas.
 Especialmente diseñado para un facil uso en veterinarias, con acceso mediante roles para la gestion de los medicos veterinarios y para un acceso de los dueños los cuales pueden ver los datos y la infomacion de sus mascotas para un correcto seguimiento
 
-<h4>Cuenta con varias secciones principales:</h4>
+<h4>Cuenta con varias secciones:</h4>
 
 En la parte superior podemos apreciar los datos del usuario con el que ingresamos (Medico veterinario) junto con la fecha y hora actual que se actualiza constantemente por medio de un reloj realizado en JS.
 Tambien vemos la barra lateral izquierda que encontramos un menu con varios accesos a las secciones disponibles el cual es desplegable y con una pantalla de menos de 550px se mueve a la parte superior.
